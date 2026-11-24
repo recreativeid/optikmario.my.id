@@ -462,9 +462,11 @@
         $reelsList = !empty($reels) ? $reels : (optik_config('reels') ?? []);
         foreach ($reelsList as $reel): 
       ?>
-        <a href="<?php echo htmlspecialchars($reel['reel_url']); ?>" target="_blank" rel="noopener" 
-           class="group relative rounded-2xl overflow-hidden aspect-[9/16] bg-carbon block border border-borderSubtle shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5"
-           title="Tonton di Instagram: <?php echo htmlspecialchars($reel['title']); ?>">
+        <a href="<?php echo htmlspecialchars($reel['reel_url']); ?>" 
+           data-reel-url="<?php echo htmlspecialchars($reel['reel_url']); ?>"
+           data-reel-title="<?php echo htmlspecialchars($reel['title']); ?>"
+           class="reel-modal-trigger group relative rounded-2xl overflow-hidden aspect-[9/16] bg-carbon block border border-borderSubtle shadow-sm hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 cursor-pointer"
+           title="Klik untuk putar preview video: <?php echo htmlspecialchars($reel['title']); ?>">
           
           <!-- Background Video Thumbnail (Full Clean Reel Cover) -->
           <img src="<?php echo htmlspecialchars($reel['thumbnail']); ?>" 
@@ -476,6 +478,58 @@
           <div class="absolute inset-0 border-2 border-transparent group-hover:border-rose-500/40 rounded-2xl pointer-events-none transition duration-300"></div>
         </a>
       <?php endforeach; ?>
+    </div>
+
+    <!-- REELS VIDEO PREVIEW POPUP MODAL -->
+    <div id="reel-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 opacity-0 transition-opacity duration-300">
+      <div class="relative w-full max-w-[360px] sm:max-w-[400px] bg-carbon rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col transform scale-95 transition-transform duration-300" id="reel-modal-container">
+        
+        <!-- Modal Header -->
+        <div class="px-4 py-3 bg-carbon/95 border-b border-white/10 flex items-center justify-between z-10 text-white">
+          <div class="flex items-center gap-2 overflow-hidden">
+            <i class="fa-brands fa-instagram text-rose-500 text-base shrink-0"></i>
+            <div class="truncate">
+              <div class="text-[9px] text-stone-400 uppercase font-black tracking-wider">Preview Video Reels</div>
+              <div id="reel-modal-title" class="text-xs font-bold text-white truncate max-w-[200px] sm:max-w-xs"></div>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-2 shrink-0">
+            <!-- Open in Instagram Button -->
+            <a id="reel-modal-external-link" href="#" target="_blank" rel="noopener" 
+               class="h-7 px-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-[10px] font-bold flex items-center gap-1.5 transition"
+               title="Buka langsung di Instagram">
+              <span>Instagram</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-rose-400"></i>
+            </a>
+            
+            <!-- Close Button -->
+            <button type="button" id="reel-modal-close" 
+                    class="w-7 h-7 rounded-full bg-white/10 hover:bg-rose-600 hover:text-white text-stone-300 flex items-center justify-center transition cursor-pointer"
+                    aria-label="Tutup Preview">
+              <i class="fa-solid fa-xmark text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Video Embed Frame Container -->
+        <div class="relative w-full aspect-[9/16] bg-black flex items-center justify-center">
+          <!-- Loading Spinner -->
+          <div id="reel-modal-loader" class="absolute inset-0 flex flex-col items-center justify-center gap-2.5 bg-black z-0 text-stone-400 text-xs">
+            <div class="w-8 h-8 border-2 border-neonLime border-t-transparent rounded-full animate-spin"></div>
+            <span>Memutar Video Reels...</span>
+          </div>
+          
+          <!-- Video Iframe Embed -->
+          <iframe id="reel-modal-iframe" 
+                  src="" 
+                  class="relative z-10 w-full h-full border-0" 
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+                  allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
     </div>
 
   </div>
@@ -749,4 +803,82 @@
     const msg = `Halo Optik Mario, saya baru saja menyelesaikan Kuis di website:\n- Bentuk Wajah: ${selectedWajah}\n- Kebutuhan Lensa: ${selectedLensa}\n- Rekomendasi: ${title}\n\nSaya ingin konsultasi lebih lanjut mengenai ketersediaan dan pemasangan lensa resep saya. Terima kasih!`;
     window.open('https://wa.me/62895708675050?text=' + encodeURIComponent(msg), '_blank');
   });
+
+  // =========================================================================
+  // REELS VIDEO PREVIEW POPUP MODAL LOGIC
+  // =========================================================================
+  (function initReelsModal() {
+    const reelModal = document.getElementById('reel-modal');
+    const reelContainer = document.getElementById('reel-modal-container');
+    const reelIframe = document.getElementById('reel-modal-iframe');
+    const reelTitle = document.getElementById('reel-modal-title');
+    const reelExternalLink = document.getElementById('reel-modal-external-link');
+    const reelCloseBtn = document.getElementById('reel-modal-close');
+    const reelLoader = document.getElementById('reel-modal-loader');
+    const reelTriggers = document.querySelectorAll('.reel-modal-trigger');
+
+    if (!reelModal || !reelIframe) return;
+
+    function openReelModal(reelUrl, title) {
+      // Extract code from Instagram reel URL: /reel/CODE/ or /p/CODE/
+      const match = reelUrl.match(/\/(?:reel|p)\/([a-zA-Z0-9_-]+)/);
+      const code = match ? match[1] : '';
+      const embedUrl = code ? `https://www.instagram.com/reel/${code}/embed/` : reelUrl;
+
+      if (reelTitle) reelTitle.innerText = title || 'Video Reels Optik Mario';
+      if (reelExternalLink) reelExternalLink.href = reelUrl;
+      if (reelLoader) reelLoader.classList.remove('hidden');
+
+      reelIframe.onload = () => {
+        if (reelLoader) reelLoader.classList.add('hidden');
+      };
+
+      reelIframe.src = embedUrl;
+
+      reelModal.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        reelModal.classList.remove('opacity-0');
+        if (reelContainer) {
+          reelContainer.classList.remove('scale-95');
+          reelContainer.classList.add('scale-100');
+        }
+      });
+
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeReelModal() {
+      reelModal.classList.add('opacity-0');
+      if (reelContainer) {
+        reelContainer.classList.remove('scale-100');
+        reelContainer.classList.add('scale-95');
+      }
+      setTimeout(() => {
+        reelModal.classList.add('hidden');
+        if (reelIframe) reelIframe.src = ''; // stop video audio
+        document.body.style.overflow = '';
+      }, 250);
+    }
+
+    reelTriggers.forEach(trig => {
+      trig.addEventListener('click', (e) => {
+        e.preventDefault();
+        const url = trig.getAttribute('data-reel-url');
+        const title = trig.getAttribute('data-reel-title');
+        openReelModal(url, title);
+      });
+    });
+
+    if (reelCloseBtn) reelCloseBtn.addEventListener('click', closeReelModal);
+
+    reelModal.addEventListener('click', (e) => {
+      if (e.target === reelModal) closeReelModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !reelModal.classList.contains('hidden')) {
+        closeReelModal();
+      }
+    });
+  })();
 </script>
