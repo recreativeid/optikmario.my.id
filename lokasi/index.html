@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <base href="../">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Lokasi Cabang Singkawang & Mempawah — Optik Mario — Optik Mario</title>
+  <meta name="description" content="Optik Mario: Brand kacamata presisi dan optik modern di Singkawang dan Mempawah. Menampilkan koleksi frame resmi Luniva Eyewear, lensa optometri terstandar, dan layanan refraksi mata terpercaya.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display (The Iconic Trexlens Editorial Pairing) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Instant Theme Initializer (prevents flash of default theme) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('optik_theme') || 'warm';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: 'rgb(var(--color-canvas) / <alpha-value>)',
+            surface: 'rgb(var(--color-surface) / <alpha-value>)',
+            surfaceLight: 'rgb(var(--color-surface-light) / <alpha-value>)',
+            surfaceCard: 'rgb(var(--color-surface-card) / <alpha-value>)',
+            carbon: 'rgb(var(--color-carbon) / <alpha-value>)',
+            stoneMuted: 'rgb(var(--color-stone-muted) / <alpha-value>)',
+            neonLime: 'rgb(var(--color-neon-lime) / <alpha-value>)',
+            neonLimeHover: 'rgb(var(--color-neon-lime-hover) / <alpha-value>)',
+            forestDark: 'rgb(var(--color-forest-dark) / <alpha-value>)',
+            borderSubtle: 'rgb(var(--color-border-subtle) / <alpha-value>)',
+            pinkSoft: 'rgb(var(--color-pink-soft) / <alpha-value>)',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ========================================================================= */
+    /* DUAL THEME COLOR TOKENS: WARM CREAM (DEFAULT) VS ZEST FRESH GREEN         */
+    /* ========================================================================= */
+    :root, html[data-theme="warm"] {
+      --color-canvas: 248 246 240;        /* #F8F6F0 Warm Cream */
+      --color-surface: 239 236 227;       /* #EFECE3 Muted Bone */
+      --color-surface-light: 244 241 232; /* #F4F1E8 Soft Card */
+      --color-surface-card: 255 255 255;  /* #FFFFFF Pure White */
+      --color-carbon: 24 25 23;           /* #181917 Deep Charcoal */
+      --color-stone-muted: 104 107 99;    /* #686B63 Olive Slate */
+      --color-neon-lime: 212 248 104;     /* #D4F868 Neon Lime */
+      --color-neon-lime-hover: 194 232 80;/* #C2E850 */
+      --color-forest-dark: 36 51 40;      /* #243328 Forest Acetate */
+      --color-border-subtle: 229 225 214; /* #E5E1D6 Border Divider */
+      --color-pink-soft: 246 229 229;     /* #F6E5E5 Soft Pill Bag */
+    }
+
+    html[data-theme="fresh-green"] {
+      --color-canvas: 242 248 234;        /* #F2F8EA Fresh Pale Crisp Green */
+      --color-surface: 227 240 211;       /* #E3F0D3 Fresh Leaf Surface */
+      --color-surface-light: 237 246 226; /* #EDF6E2 Crisp Tint Card */
+      --color-surface-card: 255 255 255;  /* #FFFFFF Clean Pure White */
+      --color-carbon: 22 40 11;           /* #16280B Deep Organic Green Dark */
+      --color-stone-muted: 81 113 53;     /* #517135 Natural Foliage Muted */
+      --color-neon-lime: 123 173 50;      /* #7BAD32 Signature Zest Fresh Green Tone */
+      --color-neon-lime-hover: 109 158 42;/* #6D9E2A Deep Green Hover */
+      --color-forest-dark: 25 49 12;      /* #19310C Dark Evergreen */
+      --color-border-subtle: 210 231 189; /* #D2E7BD Spring Green Border */
+      --color-pink-soft: 224 242 203;     /* #E0F2CB Fresh Lime Pill Bag */
+    }
+
+    html {
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    /* Exact Trexlens Dribbble Visual Language */
+    body {
+      background-color: rgb(var(--color-canvas));
+      color: rgb(var(--color-carbon));
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    ::selection {
+      background-color: rgb(var(--color-neon-lime));
+      color: rgb(var(--color-carbon));
+    }
+
+    html[data-theme="fresh-green"] ::selection {
+      background-color: rgb(var(--color-neon-lime));
+      color: #FFFFFF;
+    }
+
+    html[data-theme="fresh-green"] .bg-neonLime {
+      color: #FFFFFF !important;
+    }
+    html[data-theme="fresh-green"] .bg-neonLime * {
+      color: #FFFFFF !important;
+    }
+    html[data-theme="fresh-green"] .text-neonLime {
+      color: #7BAD32 !important;
+    }
+
+    /* The Signature Serif Italic Accent */
+    .font-serif-accent {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    /* Soft Organic Lens Glow */
+    .lens-glow {
+      background: radial-gradient(circle, rgba(212, 248, 104, 0.35) 0%, rgba(212, 248, 104, 0) 70%);
+    }
+
+    /* Glassmorphic Hotspot Tag */
+    .hotspot-tag {
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      box-shadow: 0 6px 24px -2px rgba(24, 25, 23, 0.08);
+    }
+
+    /* Horizontal Reel without Scrollbar */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Subtle image hover zoom */
+    .img-zoom {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover .img-zoom {
+      transform: scale(1.04);
+    }
+
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* ========================================================================= */
+    /* SCROLL-DRIVEN BLUR REVEAL ANIMATION (Smooth Top-to-Bottom Entrance)       */
+    /* ========================================================================= */
+    .scroll-blur-init {
+      opacity: 0;
+      filter: blur(14px);
+      transform: translateY(32px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, filter, transform;
+    }
+
+    .scroll-blur-visible {
+      opacity: 1 !important;
+      filter: blur(0px) !important;
+      transform: translateY(0px) !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-blur-init {
+        opacity: 1 !important;
+        filter: none !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-canvas text-carbon flex flex-col min-h-screen">
+
+  <!-- MASTER HEADER -->
+  <!-- TOP UTILITY STRIP -->
+<div class="bg-carbon text-canvas text-xs py-2 px-4 border-b border-carbon/10 hidden sm:block">
+  <div class="max-w-7xl mx-auto flex justify-between items-center text-[11px] tracking-wide font-medium">
+    <div class="flex items-center gap-6">
+      <span class="flex items-center gap-1.5 text-stone-300">
+        <i class="fa-solid fa-location-dot text-neonLime"></i>
+        <span>Cabang Resmi: <strong>Singkawang</strong> (Jl. P. Diponegoro 35) & <strong>Mempawah</strong> (Jl. Daeng Manambon 16)</span>
+      </span>
+    </div>
+    <div class="flex items-center gap-5">
+      <!-- Instagram Link -->
+      <a href="https://www.instagram.com/optik_mario?fqnt=MWF0dnl3OWFvYmpycQ==" target="_blank" rel="noopener" class="text-stone-300 hover:text-neonLime transition flex items-center gap-1.5">
+        <i class="fa-brands fa-instagram text-neonLime text-xs"></i>
+        <span>@optik_mario</span>
+      </a>
+      <span class="text-white/20">|</span>
+      <!-- Shopee Link -->
+      <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" class="text-stone-300 hover:text-neonLime transition flex items-center gap-1.5">
+        <i class="fa-solid fa-bag-shopping text-neonLime text-xs"></i>
+        <span>Shopee: lunivaeyewear</span>
+      </a>
+      <span class="text-white/20">|</span>
+      <a href="mailto:marioopt09@gmail.com" class="text-stone-300 hover:text-white transition flex items-center gap-1">
+        <i class="fa-regular fa-envelope text-neonLime"></i>
+        <span>marioopt09@gmail.com</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN TREXLENS-STYLE NAVBAR (BAHASA INDONESIA MENU) -->
+<header class="sticky top-0 z-40 bg-canvas/90 backdrop-blur-md border-b border-borderSubtle transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    
+    <!-- BRAND WORDMARK -->
+    <a href="index.html" class="flex items-center gap-2 group">
+      <span class="text-2xl font-black tracking-tight text-carbon font-sans">
+        OPTIK<span class="font-normal text-stoneMuted">MARIO</span>
+      </span>
+      <span class="w-2 h-2 rounded-full bg-neonLime inline-block animate-pulse"></span>
+    </a>
+
+    <!-- CENTER NAVIGATION LINKS (BAHASA INDONESIA: BERANDA, PRODUK, LAYANAN KLINIS, TENTANG KAMI, KONTAK) -->
+    <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-carbon/80">
+      <a href="index.html" class="hover:text-carbon transition ">
+        Beranda
+      </a>
+      <a href="produk.html" class="hover:text-carbon transition ">
+        Produk
+      </a>
+      <a href="layanan.html" class="hover:text-carbon transition ">
+        Layanan Klinis
+      </a>
+      <a href="tentang-kami.html" class="hover:text-carbon transition ">
+        Tentang Kami
+      </a>
+      <a href="lokasi.html" class="hover:text-carbon transition ">
+        Kontak
+      </a>
+    </nav>
+
+    <!-- RIGHT ACTION: SHOPEE BAG BUTTON, THEME TOGGLE & SIGNATURE NEON LIME PILL BUTTON -->
+    <div class="flex items-center gap-2.5 sm:gap-3">
+      <!-- Theme Switcher Toggle (Warm Classic / Zest Fresh Green) -->
+      <button type="button" id="theme-toggle-btn" 
+              class="h-10 px-3 sm:px-3.5 rounded-full bg-surface hover:bg-surfaceLight text-carbon flex items-center gap-2 text-xs font-bold border border-borderSubtle transition shadow-xs cursor-pointer select-none"
+              title="Ganti Tema Warna (Warm Classic / Zest Fresh Green)">
+        <span id="theme-color-indicator" class="w-2.5 h-2.5 rounded-full bg-neonLime inline-block shadow-xs border border-carbon/20"></span>
+        <span id="theme-toggle-label" class="hidden lg:inline text-[11px] uppercase tracking-wider font-extrabold">Warm Cream</span>
+        <i class="fa-solid fa-palette text-stoneMuted text-xs"></i>
+      </button>
+
+      <!-- Soft Pill Shopping Bag Button (Shopee Luniva Eyewear) -->
+      <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" 
+         class="h-10 px-3.5 rounded-full bg-pink-100/70 hover:bg-pink-100 text-carbon flex items-center gap-1.5 text-xs font-bold border border-pink-200/60 transition shadow-sm"
+         title="Buka Toko Shopee Luniva Eyewear">
+        <i class="fa-solid fa-bag-shopping text-sm text-carbon/80"></i>
+        <span>(0)</span>
+      </a>
+
+      <!-- Primary Neon Lime Pill Button: [ 👓 Belanja Sekarang ] -->
+      <a href="produk.html" 
+         class="inline-flex items-center gap-2 bg-neonLime hover:bg-neonLimeHover text-carbon text-xs font-black uppercase tracking-wider px-5 py-2.5 rounded-full shadow-sm hover:shadow transition transform hover:-translate-y-0.5">
+        <i class="fa-solid fa-glasses text-sm"></i>
+        <span>Belanja Sekarang</span>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button type="button" id="mobile-menu-toggle" aria-label="Buka Menu" 
+              class="md:hidden w-10 h-10 rounded-full border border-borderSubtle bg-white flex items-center justify-center text-carbon hover:bg-surface transition">
+        <i class="fa-solid fa-bars text-sm" id="hamburger-icon"></i>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- MOBILE NAVIGATION DRAWER (BAHASA INDONESIA) -->
+  <div id="mobile-drawer" class="hidden md:hidden bg-canvas border-b border-borderSubtle px-4 pt-4 pb-6">
+    <div class="flex flex-col space-y-3 text-xs font-bold uppercase tracking-wider text-carbon">
+      <a href="index.html" class="py-2.5 px-4 rounded-xl bg-surface transition">Beranda</a>
+      <a href="produk.html" class="py-2.5 px-4 rounded-xl bg-surface transition">Produk (Luniva Eyewear)</a>
+      <a href="layanan.html" class="py-2.5 px-4 rounded-xl bg-surface transition">Layanan Klinis & Optometri</a>
+      <a href="tentang-kami.html" class="py-2.5 px-4 rounded-xl bg-surface transition">Tentang Kami</a>
+      <a href="lokasi.html" class="py-2.5 px-4 rounded-xl bg-surface transition">Kontak & Lokasi Cabang</a>
+      
+      <div class="pt-3 border-t border-borderSubtle flex flex-col gap-2">
+        <!-- Mobile Theme Toggle -->
+        <button type="button" id="mobile-theme-toggle-btn"
+                class="w-full py-2.5 px-4 rounded-xl bg-surface border border-borderSubtle text-carbon font-bold text-xs flex items-center justify-between transition cursor-pointer">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-palette text-stoneMuted"></i>
+            <span>Ganti Tema Warna</span>
+          </span>
+          <span id="mobile-theme-name" class="font-black text-[10px] uppercase tracking-wider text-carbon bg-canvas px-2.5 py-0.5 rounded-full border border-borderSubtle">Warm Cream</span>
+        </button>
+
+        <a href="https://www.instagram.com/optik_mario?fqnt=MWF0dnl3OWFvYmpycQ==" target="_blank" rel="noopener" class="w-full text-center py-2.5 rounded-full bg-canvas border border-borderSubtle text-carbon font-bold text-xs">
+          <i class="fa-brands fa-instagram text-rose-600 mr-1.5"></i> Instagram @optik_mario
+        </a>
+        <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" class="w-full text-center py-2.5 rounded-full bg-pink-100 text-carbon font-bold text-xs">
+          <i class="fa-solid fa-store text-orange-600 mr-1.5"></i> Shopee: lunivaeyewear
+        </a>
+        <a href="https://wa.me/62895708675050" target="_blank" rel="noopener" class="w-full text-center py-2.5 rounded-full bg-neonLime text-carbon font-black text-xs">
+          <i class="fa-brands fa-whatsapp text-sm mr-1.5"></i> WA Mempawah (0895 708675050)
+        </a>
+        <a href="https://wa.me/62895320119379" target="_blank" rel="noopener" class="w-full text-center py-2.5 rounded-full bg-carbon text-canvas font-bold text-xs">
+          <i class="fa-brands fa-whatsapp text-sm text-neonLime mr-1.5"></i> WA Singkawang (0895 3201 19379)
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- MAIN PAGE CONTENT INJECTION -->
+  <main class="flex-grow pb-16 sm:pb-0">
+    <section class="py-12 sm:py-20 bg-canvas">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- HEADER -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-[11px] font-black uppercase tracking-[0.2em] text-stoneMuted mb-2 block">✦ DUAL LOCATIONS</span>
+      <h1 class="text-3xl sm:text-5xl font-black text-carbon tracking-tight mb-4">
+        Lokasi Toko & <em class="font-serif-accent font-normal italic">Kontak Cabang</em>
+      </h1>
+      <p class="text-xs sm:text-base text-stoneMuted leading-relaxed">
+        Kunjungi cabang fisik kami di Singkawang dan Mempawah untuk pemeriksaan refraksi mata akurat, perbaikan kacamata, dan pemilihan langsung koleksi frame Luniva Eyewear.
+      </p>
+    </div>
+
+    <!-- DUAL STORE DETAILS -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+      
+      <!-- STORE 1: SINGKAWANG -->
+      <div class="bg-surface rounded-3xl border border-borderSubtle overflow-hidden shadow-sm flex flex-col justify-between p-6 sm:p-8">
+        <div>
+          <!-- Photo Container -->
+          <div class="rounded-2xl overflow-hidden aspect-[16/9] bg-canvas mb-6 border border-borderSubtle">
+            <img src="/optikmario.my.id/public/images/locations/optik_mario_singkawang.jpg" 
+                 onerror="this.onerror=null; this.src='public/images/locations/optik_mario_singkawang.jpg';"
+                 alt="Toko Optik Mario Singkawang" class="w-full h-full object-cover">
+          </div>
+
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-black uppercase tracking-wider text-carbon bg-canvas px-3.5 py-1 rounded-full border border-borderSubtle">Cabang 01 · Singkawang</span>
+            <span class="text-xs text-stoneMuted font-mono">08.30 - 21.00 WIB</span>
+          </div>
+
+          <h2 class="text-2xl font-black text-carbon mb-3">Optik Mario Singkawang</h2>
+          
+          <div class="space-y-3 text-xs sm:text-sm text-carbon mb-6 bg-canvas p-4 rounded-2xl border border-borderSubtle">
+            <div class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-stoneMuted mt-1"></i>
+              <span>Jl. P. Diponegoro No. 35, Singkawang, Kalimantan Barat</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
+              <span>WhatsApp: <strong>0895 3201 19379</strong></span>
+            </div>
+          </div>
+
+          <div class="text-xs text-stoneMuted mb-6">
+            <strong class="text-carbon block mb-1">✦ Fasilitas Cabang:</strong>
+            Pemeriksaan refraksi komputer, uji ketajaman penglihatan Snellen, pembersihan kacamata ultrasonik, fitting lensa presisi.
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-borderSubtle flex flex-col sm:flex-row gap-3">
+          <a href="https://wa.me/62895320119379?text=Halo%20Optik%20Mario%20Singkawang,%20saya%20ingin%20konsultasi%20kacamata" 
+             target="_blank" rel="noopener"
+             class="flex-1 bg-neonLime hover:bg-neonLimeHover text-carbon text-xs font-black uppercase tracking-wider py-3.5 px-4 rounded-full transition text-center flex items-center justify-center gap-2 shadow-sm">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>Chat WA Singkawang</span>
+          </a>
+          <a href="https://maps.google.com/?q=Optik+Mario+Jl+P+Diponegoro+35+Singkawang" 
+             target="_blank" rel="noopener"
+             class="flex-1 bg-canvas hover:bg-white text-carbon text-xs font-bold uppercase tracking-wider py-3.5 px-4 rounded-full border border-borderSubtle transition text-center flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            <span>Google Maps</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- STORE 2: MEMPAWAH -->
+      <div class="bg-surface rounded-3xl border border-borderSubtle overflow-hidden shadow-sm flex flex-col justify-between p-6 sm:p-8">
+        <div>
+          <!-- Photo Container -->
+          <div class="rounded-2xl overflow-hidden aspect-[16/9] bg-canvas mb-6 border border-borderSubtle">
+            <img src="/optikmario.my.id/public/images/locations/optik_mario_mempawah.jpg" 
+                 onerror="this.onerror=null; this.src='public/images/locations/optik_mario_mempawah.jpg';"
+                 alt="Toko Optik Mario Mempawah" class="w-full h-full object-cover">
+          </div>
+
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-black uppercase tracking-wider text-carbon bg-canvas px-3.5 py-1 rounded-full border border-borderSubtle">Cabang 02 · Mempawah</span>
+            <span class="text-xs text-stoneMuted font-mono">08.30 - 21.00 WIB</span>
+          </div>
+
+          <h2 class="text-2xl font-black text-carbon mb-3">Optik Mario Mempawah</h2>
+          
+          <div class="space-y-3 text-xs sm:text-sm text-carbon mb-6 bg-canvas p-4 rounded-2xl border border-borderSubtle">
+            <div class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-stoneMuted mt-1"></i>
+              <span>Jl. Daeng Manambon No. 16, Mempawah, Kalimantan Barat</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
+              <span>WhatsApp: <strong>0895 7086 75050</strong></span>
+            </div>
+          </div>
+
+          <div class="text-xs text-stoneMuted mb-6">
+            <strong class="text-carbon block mb-1">✦ Fasilitas Cabang:</strong>
+            Pusat koordinator Home Care, periksa refraksi optometri, konsultasi Myopia & Low Vision, stel kacamata gratis.
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-borderSubtle flex flex-col sm:flex-row gap-3">
+          <a href="https://wa.me/62895708675050?text=Halo%20Optik%20Mario%20Mempawah,%20saya%20ingin%20konsultasi%20kacamata" 
+             target="_blank" rel="noopener"
+             class="flex-1 bg-neonLime hover:bg-neonLimeHover text-carbon text-xs font-black uppercase tracking-wider py-3.5 px-4 rounded-full transition text-center flex items-center justify-center gap-2 shadow-sm">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>Chat WA Mempawah</span>
+          </a>
+          <a href="https://maps.google.com/?q=Optik+Mario+Jl+Daeng+Manambon+16+Mempawah" 
+             target="_blank" rel="noopener"
+             class="flex-1 bg-canvas hover:bg-white text-carbon text-xs font-bold uppercase tracking-wider py-3.5 px-4 rounded-full border border-borderSubtle transition text-center flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            <span>Google Maps</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- GENERAL INQUIRY FOOTER CARD -->
+    <div class="bg-carbon text-canvas rounded-3xl p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+      <div>
+        <h3 class="text-xl font-black text-white mb-1">Pertanyaan Umum & Pemesanan Online</h3>
+        <p class="text-xs text-stone-300">Email: marioopt09@gmail.com · Toko Shopee: shopee.co.id/lunivaeyewear</p>
+      </div>
+      <a href="mailto:marioopt09@gmail.com" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white text-xs font-black uppercase tracking-wider px-6 py-3.5 rounded-full border border-white/20 transition whitespace-nowrap">
+        <i class="fa-regular fa-envelope"></i>
+        <span>Kirim Email</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+  </main>
+
+  <!-- MASTER FOOTER -->
+  <footer class="bg-carbon text-canvas pt-16 pb-12 border-t border-borderSubtle">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- TOP ROW: BRAND & PHILOSOPHY -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-14 border-b border-white/10">
+      
+      <!-- Brand Column -->
+      <div class="md:col-span-4">
+        <a href="index.html" class="inline-flex items-center gap-2 mb-4">
+          <span class="text-2xl font-black tracking-tight text-white font-sans">
+            OPTIK<span class="font-normal text-stone-400">MARIO</span>
+          </span>
+          <span class="w-2 h-2 rounded-full bg-neonLime inline-block"></span>
+        </a>
+        
+        <p class="text-xs text-stone-400 leading-relaxed mb-4">
+          Penyedia kacamata modern, frame berkualitas Luniva Eyewear, dan layanan pemeriksaan refraksi klinis terpercaya di Singkawang dan Mempawah.
+        </p>
+
+        <!-- Brand Truth Callout -->
+        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl mb-6">
+          <div class="text-[10px] font-black text-neonLime uppercase tracking-wider mb-1">Prinsip Kesehatan Mata</div>
+          <p class="text-xs text-stone-300 italic leading-relaxed">
+            "Harga murah bisa menggiurkan, tapi kesehatan mata tak boleh dikorbankan. Konsultasikan resep mata Anda di Optik Mario – Pilih Lensa Yang Aman Untuk Penglihatan."
+          </p>
+        </div>
+
+        <!-- Social Media Badges -->
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/optik_mario?fqnt=MWF0dnl3OWFvYmpycQ==" target="_blank" rel="noopener" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 hover:bg-neonLime hover:text-carbon flex items-center justify-center text-white transition" title="Instagram @optik_mario">
+            <i class="fa-brands fa-instagram text-sm"></i>
+          </a>
+          <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" aria-label="Shopee Store" class="w-9 h-9 rounded-full bg-white/10 hover:bg-neonLime hover:text-carbon flex items-center justify-center text-white transition" title="Shopee: lunivaeyewear">
+            <i class="fa-solid fa-bag-shopping text-sm"></i>
+          </a>
+          <a href="https://wa.me/62895708675050" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-white/10 hover:bg-neonLime hover:text-carbon flex items-center justify-center text-white transition" title="WhatsApp Konsultasi">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+          </a>
+          <a href="mailto:marioopt09@gmail.com" aria-label="Email" class="w-9 h-9 rounded-full bg-white/10 hover:bg-neonLime hover:text-carbon flex items-center justify-center text-white transition" title="Email Resmi">
+            <i class="fa-regular fa-envelope text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Indonesian Navigation -->
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-black uppercase tracking-wider text-white mb-4">Navigasi Utama</h4>
+        <ul class="space-y-2 text-xs text-stone-400">
+          <li><a href="index.html" class="hover:text-neonLime transition">Beranda</a></li>
+          <li><a href="produk.html" class="hover:text-neonLime transition">Produk & Katalog</a></li>
+          <li><a href="layanan.html" class="hover:text-neonLime transition">Layanan Klinis</a></li>
+          <li><a href="tentang-kami.html" class="hover:text-neonLime transition">Tentang Kami</a></li>
+          <li><a href="lokasi.html" class="hover:text-neonLime transition">Kontak & Lokasi</a></li>
+          <li><a href="portal.html" class="hover:text-neonLime transition">Portal Edukasi</a></li>
+        </ul>
+      </div>
+
+      <!-- Katalog Luniva Eyewear -->
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-black uppercase tracking-wider text-white mb-4">Katalog Luniva</h4>
+        <ul class="space-y-2 text-xs text-stone-400">
+          <li><a href="produk.html?kategori=frame-bulat" class="hover:text-neonLime transition">Luniva Arkema (Round)</a></li>
+          <li><a href="produk.html?kategori=frame-persegi" class="hover:text-neonLime transition">Luniva Ebony (Square)</a></li>
+          <li><a href="produk.html?kategori=frame-retro-bold" class="hover:text-neonLime transition">Luniva Black Cobra (Bold)</a></li>
+          <li><a href="produk.html?kategori=frame-cat-eye" class="hover:text-neonLime transition">Luniva Cat-Eye Audrey</a></li>
+          <li><a href="produk.html?kategori=sunglasses" class="hover:text-neonLime transition">Sunglasses Polarized</a></li>
+          <li><a href="produk.html?kategori=paket-lensa" class="hover:text-neonLime transition">Paket Lensa Optik</a></li>
+        </ul>
+      </div>
+
+      <!-- Dua Cabang Fisik Resmi -->
+      <div class="md:col-span-4">
+        <h4 class="text-xs font-black uppercase tracking-wider text-white mb-4">Dua Cabang Resmi</h4>
+        
+        <div class="space-y-3.5 text-xs">
+          <!-- Singkawang -->
+          <div class="bg-white/5 p-3.5 rounded-2xl border border-white/10">
+            <div class="font-bold text-white flex items-center justify-between mb-1">
+              <span>Optik Mario Singkawang</span>
+              <span class="text-[10px] text-neonLime font-mono">Cabang 01</span>
+            </div>
+            <p class="text-stone-400 mb-2 leading-relaxed">Jl. P. Diponegoro 35, Singkawang</p>
+            <div class="flex items-center gap-3">
+              <a href="https://wa.me/62895320119379" target="_blank" rel="noopener" class="text-[11px] font-bold text-neonLime hover:underline flex items-center gap-1">
+                <i class="fa-brands fa-whatsapp"></i> 0895 3201 19379
+              </a>
+              <span class="text-white/20">•</span>
+              <a href="https://maps.google.com/?q=Optik+Mario+Jl+P+Diponegoro+35+Singkawang" target="_blank" rel="noopener" class="text-[11px] text-stone-400 hover:text-white flex items-center gap-1">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Petunjuk Arah
+              </a>
+            </div>
+          </div>
+
+          <!-- Mempawah -->
+          <div class="bg-white/5 p-3.5 rounded-2xl border border-white/10">
+            <div class="font-bold text-white flex items-center justify-between mb-1">
+              <span>Optik Mario Mempawah</span>
+              <span class="text-[10px] text-neonLime font-mono">Cabang 02</span>
+            </div>
+            <p class="text-stone-400 mb-2 leading-relaxed">Jl. Daeng Manambon 16, Mempawah</p>
+            <div class="flex items-center gap-3">
+              <a href="https://wa.me/62895708675050" target="_blank" rel="noopener" class="text-[11px] font-bold text-neonLime hover:underline flex items-center gap-1">
+                <i class="fa-brands fa-whatsapp"></i> 0895 7086 75050
+              </a>
+              <span class="text-white/20">•</span>
+              <a href="https://maps.google.com/?q=Optik+Mario+Jl+Daeng+Manambon+16+Mempawah" target="_blank" rel="noopener" class="text-[11px] text-stone-400 hover:text-white flex items-center gap-1">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Petunjuk Arah
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM ROW: COPYRIGHT & DIRECT CHANNELS -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-4">
+      <div>
+        © 2026 Optik Mario. Semua hak cipta dilindungi. Lebih Jelas Melihat, Lebih Percaya Diri.
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="https://www.instagram.com/optik_mario?fqnt=MWF0dnl3OWFvYmpycQ==" target="_blank" rel="noopener" class="hover:text-neonLime transition flex items-center gap-1">
+          <i class="fa-brands fa-instagram text-neonLime"></i> Instagram @optik_mario
+        </a>
+        <span class="text-white/20">|</span>
+        <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" class="hover:text-neonLime transition flex items-center gap-1">
+          <i class="fa-solid fa-store text-neonLime"></i> shopee.co.id/lunivaeyewear
+        </a>
+        <span class="text-white/20">|</span>
+        <a href="lokasi.html" class="hover:text-neonLime transition">Singkawang & Mempawah</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <!-- STICKY WHATSAPP ON MOBILE -->
+  <!-- STICKY BOTTOM WHATSAPP BAR ON MOBILE (TREXLENS PILL STYLE) -->
+<div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-canvas/95 backdrop-blur-md border-t border-borderSubtle p-3 shadow-2xl">
+  <div class="flex items-center gap-2 max-w-sm mx-auto">
+    <!-- WA Mempawah (Neon Lime Pill) -->
+    <a href="https://wa.me/62895708675050?text=Halo%20Optik%20Mario%20Mempawah,%20saya%20ingin%20konsultasi%20kacamata%20dan%20resep%20mata" 
+       target="_blank" rel="noopener"
+       class="flex-1 bg-neonLime hover:bg-neonLimeHover text-carbon text-xs font-black py-3 px-3 rounded-full flex items-center justify-center gap-1.5 shadow-md uppercase tracking-wider">
+      <i class="fa-brands fa-whatsapp text-sm"></i>
+      <span>WA Mempawah</span>
+    </a>
+    
+    <!-- WA Singkawang (Carbon Pill) -->
+    <a href="https://wa.me/62895320119379?text=Halo%20Optik%20Mario%20Singkawang,%20saya%20ingin%20konsultasi%20kacamata%20dan%20resep%20mata" 
+       target="_blank" rel="noopener"
+       class="flex-1 bg-carbon hover:bg-black text-canvas text-xs font-bold py-3 px-3 rounded-full flex items-center justify-center gap-1.5 shadow-md uppercase tracking-wider">
+      <i class="fa-brands fa-whatsapp text-sm text-neonLime"></i>
+      <span>WA Singkawang</span>
+    </a>
+  </div>
+</div>
+
+  <!-- FLOATING QUICK THEME TOGGLE (BOTTOM LEFT) -->
+  <aside aria-label="Ganti Tema Cepat" class="fixed bottom-5 left-5 z-40">
+    <button type="button" id="floating-theme-toggle-btn"
+            class="group bg-surface/90 hover:bg-surface text-carbon border border-borderSubtle backdrop-blur-md px-3 sm:px-3.5 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 text-xs font-bold transform hover:scale-105 cursor-pointer"
+            title="Ganti Tema Warna (Warm Classic / Zest Fresh Green)">
+      <span id="floating-theme-indicator" class="w-2.5 h-2.5 rounded-full bg-neonLime inline-block shadow-xs border border-carbon/20"></span>
+      <span class="text-[11px] font-extrabold uppercase tracking-wider hidden sm:inline" id="floating-theme-label">Tema</span>
+      <i class="fa-solid fa-palette text-stoneMuted text-xs"></i>
+    </button>
+  </aside>
+
+  <!-- JAVASCRIPT LOGIC FOR NAVIGATION & INTERACTIONS -->
+  <script>
+    // Mobile Drawer Toggle
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const icon = document.getElementById('hamburger-icon');
+
+    if (toggleBtn && drawer) {
+      toggleBtn.addEventListener('click', () => {
+        drawer.classList.toggle('hidden');
+        if (drawer.classList.contains('hidden')) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        } else {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        }
+      });
+    }
+
+    // Scroll-Driven Blur Reveal Animation across all sections and menus
+    document.addEventListener('DOMContentLoaded', () => {
+      const animatedElements = document.querySelectorAll('main > section, main > div, .scroll-blur');
+      
+      if (!('IntersectionObserver' in window)) {
+        animatedElements.forEach(el => el.classList.add('scroll-blur-visible'));
+        return;
+      }
+
+      animatedElements.forEach((el, index) => {
+        const rect = el.getBoundingClientRect();
+        // If element is already in the viewport on initial page load
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('scroll-blur-init');
+          setTimeout(() => el.classList.add('scroll-blur-visible'), 50 * index);
+        } else {
+          el.classList.add('scroll-blur-init');
+        }
+      });
+
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-blur-visible');
+            scrollObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.08
+      });
+
+      animatedElements.forEach(el => scrollObserver.observe(el));
+
+      // Header dynamic glassmorphic blur when scrolling from top to bottom
+      const headerEl = document.querySelector('header');
+      if (headerEl) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 25) {
+            headerEl.classList.add('shadow-md', 'backdrop-blur-xl', 'bg-canvas/95');
+            headerEl.classList.remove('bg-canvas/90');
+          } else {
+            headerEl.classList.remove('shadow-md', 'backdrop-blur-xl', 'bg-canvas/95');
+            headerEl.classList.add('bg-canvas/90');
+          }
+        }, { passive: true });
+      }
+    });
+
+    // DUAL THEME SWITCHER (Warm Cream <-> Zest Fresh Green)
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      try {
+        localStorage.setItem('optik_theme', theme);
+      } catch (e) {}
+
+      const isGreen = theme === 'fresh-green';
+      const label = document.getElementById('theme-toggle-label');
+      const mobileLabel = document.getElementById('mobile-theme-name');
+      const indicator = document.getElementById('theme-color-indicator');
+      const floatingLabel = document.getElementById('floating-theme-label');
+      const floatingIndicator = document.getElementById('floating-theme-indicator');
+
+      if (label) label.textContent = isGreen ? 'Zest Green' : 'Warm Cream';
+      if (mobileLabel) mobileLabel.textContent = isGreen ? '🌿 Zest Green' : '🌾 Warm Cream';
+      if (floatingLabel) floatingLabel.textContent = isGreen ? 'Zest Green' : 'Warm Cream';
+      
+      const themeColor = isGreen ? '#7BAD32' : '#D4F868';
+      if (indicator) indicator.style.backgroundColor = themeColor;
+      if (floatingIndicator) floatingIndicator.style.backgroundColor = themeColor;
+    }
+
+    // GITHUB PAGES LINK GUARDIAN & ROUTE RESOLVER
+    (function() {
+      function fixLinks() {
+        const isGH = window.location.hostname.endsWith('github.io');
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        const repoPrefix = (isGH && pathParts.length > 0) ? '/' + pathParts[0] : '';
+        
+        document.querySelectorAll('a[href]').forEach(function(a) {
+          const href = a.getAttribute('href');
+          if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) {
+            return;
+          }
+          
+          // Prevent links from escaping to root github.io domain (e.g. href="/produk" -> href="/optikmario.my.id/produk.html")
+          if (href.startsWith('/') && !href.startsWith('//')) {
+            if (repoPrefix && !href.startsWith(repoPrefix)) {
+              const clean = href.replace(/^\//, '');
+              const parts = clean.split('?');
+              const route = parts[0];
+              const query = parts[1] ? '?' + parts[1] : '';
+              
+              if (!route || route === '') {
+                a.setAttribute('href', repoPrefix + '/index.html' + query);
+              } else if (['produk', 'layanan', 'lokasi', 'tentang-kami', 'portal'].includes(route)) {
+                a.setAttribute('href', repoPrefix + '/' + route + '.html' + query);
+              } else {
+                a.setAttribute('href', repoPrefix + href);
+              }
+            }
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', fixLinks);
+      } else {
+        fixLinks();
+      }
+    })();
+
+    function initThemeSwitcher() {
+      const savedTheme = localStorage.getItem('optik_theme') || 'warm';
+      applyTheme(savedTheme);
+
+      const desktopBtn = document.getElementById('theme-toggle-btn');
+      const mobileBtn = document.getElementById('mobile-theme-toggle-btn');
+      const floatingBtn = document.getElementById('floating-theme-toggle-btn');
+
+      function toggleTheme() {
+        const active = document.documentElement.getAttribute('data-theme') || 'warm';
+        const next = active === 'warm' ? 'fresh-green' : 'warm';
+        applyTheme(next);
+      }
+
+      if (desktopBtn) desktopBtn.addEventListener('click', toggleTheme);
+      if (mobileBtn) mobileBtn.addEventListener('click', toggleTheme);
+      if (floatingBtn) floatingBtn.addEventListener('click', toggleTheme);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initThemeSwitcher);
+    } else {
+      initThemeSwitcher();
+    }
+  </script>
+</body>
+</html>

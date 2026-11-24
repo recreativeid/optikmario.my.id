@@ -1,10 +1,13 @@
-<div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="<?php echo htmlspecialchars($product['category'] ?? ''); ?>"
+     data-title="<?php echo strtolower(htmlspecialchars($product['name'])); ?>"
+     data-shape="<?php echo strtolower(htmlspecialchars($product['shape'] ?? '')); ?>">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="<?php echo route_url('/produk/' . $product['slug']); ?>" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="<?php echo htmlspecialchars($product['shopee_url']); ?>" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide <?php echo htmlspecialchars($product['name']); ?>">
+       title="Lihat detail & beli di Shopee: <?php echo htmlspecialchars($product['name']); ?>">
       
       <img src="<?php echo htmlspecialchars($product['image']); ?>" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -12,11 +15,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -37,7 +40,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="<?php echo route_url('/produk/' . $product['slug']); ?>" 
+        <a href="<?php echo htmlspecialchars($product['shopee_url']); ?>" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="<?php echo htmlspecialchars($product['name']); ?>">
           <?php echo htmlspecialchars($product['name']); ?>
@@ -55,8 +58,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="<?php echo route_url('/produk/' . $product['slug']); ?>" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="<?php echo htmlspecialchars($product['shopee_url']); ?>" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>

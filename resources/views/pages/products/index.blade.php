@@ -36,7 +36,8 @@
         <?php foreach ($categories as $cat): ?>
           <?php $isActive = ($category === $cat['slug']); ?>
           <a href="<?php echo route_url('/produk?kategori=' . $cat['slug']); ?>" 
-             class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border <?php echo $isActive ? 'bg-neonLime text-carbon border-neonLime font-black shadow-sm' : 'bg-canvas text-carbon hover:bg-white border-borderSubtle'; ?>">
+             class="category-pill whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border <?php echo $isActive ? 'bg-neonLime text-carbon border-neonLime font-black shadow-sm' : 'bg-canvas text-carbon hover:bg-white border-borderSubtle'; ?>"
+             data-slug="<?php echo $cat['slug']; ?>">
             <?php echo $cat['name']; ?>
           </a>
         <?php endforeach; ?>
@@ -47,7 +48,7 @@
     <!-- PRODUCT COUNT & STATUS -->
     <div class="flex items-center justify-between text-xs text-stoneMuted mb-8 px-1">
       <div>
-        Menampilkan <strong><?php echo count($products); ?></strong> model frame terverifikasi
+        Menampilkan <strong id="product-count-display"><?php echo count($products); ?></strong> model frame terverifikasi
       </div>
       <div class="flex items-center gap-2">
         <span class="w-2 h-2 rounded-full bg-neonLime"></span>
@@ -102,4 +103,90 @@
     </div>
 
   </div>
+
+  <script>
+    // Instant client-side search & category filtering for static GitHub Pages hosting
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.querySelector('input[name="search"]');
+      const categoryLinks = document.querySelectorAll('.category-pill');
+      const productItems = document.querySelectorAll('.product-item');
+      const countDisplay = document.getElementById('product-count-display');
+      const searchForm = document.querySelector('form[action*="produk"]');
+
+      if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          applyFilter();
+        });
+      }
+
+      function getActiveCat() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('kategori') || 'semua';
+      }
+
+      function applyFilter() {
+        const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+        const activeCat = getActiveCat();
+
+        let visibleCount = 0;
+        productItems.forEach(item => {
+          const cat = item.getAttribute('data-category') || '';
+          const title = item.getAttribute('data-title') || '';
+          const shape = item.getAttribute('data-shape') || '';
+
+          const matchesCat = (activeCat === 'semua' || cat === activeCat);
+          const matchesQuery = !query || title.includes(query) || shape.includes(query);
+
+          if (matchesCat && matchesQuery) {
+            item.style.display = '';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        if (countDisplay) {
+          countDisplay.textContent = visibleCount;
+        }
+
+        // Update pill active visual state
+        categoryLinks.forEach(link => {
+          const slug = link.getAttribute('data-slug');
+          if (slug === activeCat) {
+            link.className = 'category-pill whitespace-nowrap px-4 py-2 rounded-full text-xs font-black transition border bg-neonLime text-carbon border-neonLime shadow-sm';
+          } else {
+            link.className = 'category-pill whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-canvas text-carbon hover:bg-white border-borderSubtle';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', applyFilter);
+      }
+
+      // Intercept category pill clicks for instant client filtering without page reload
+      categoryLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const slug = this.getAttribute('data-slug');
+          const newUrl = new URL(window.location.href);
+          if (slug === 'semua') {
+            newUrl.searchParams.delete('kategori');
+          } else {
+            newUrl.searchParams.set('kategori', slug);
+          }
+          window.history.pushState({}, '', newUrl.toString());
+          applyFilter();
+        });
+      });
+
+      // Initial filter on load if query param exists
+      const initialCat = getActiveCat();
+      const initialSearch = (searchInput ? searchInput.value : '').trim();
+      if (initialCat !== 'semua' || initialSearch !== '') {
+        applyFilter();
+      }
+    });
+  </script>
 </section>

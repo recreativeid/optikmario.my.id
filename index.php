@@ -51,6 +51,32 @@ if (php_sapi_name() === 'cli' && !isset($_SERVER['HTTP_HOST'])) {
 if (!function_exists('route_url')) {
     function route_url($path = '/') {
         global $basePath;
+
+        if (defined('STATIC_EXPORT') && STATIC_EXPORT) {
+            $path = trim($path, '/');
+            if (empty($path)) return 'index.html';
+
+            $parts = explode('?', $path);
+            $mainPath = $parts[0];
+            $query = isset($parts[1]) ? '?' . $parts[1] : '';
+
+            if ($mainPath === 'produk') return 'produk.html' . $query;
+            if ($mainPath === 'layanan') return 'layanan.html' . $query;
+            if ($mainPath === 'lokasi') return 'lokasi.html' . $query;
+            if ($mainPath === 'tentang-kami') return 'tentang-kami.html' . $query;
+            if ($mainPath === 'portal') return 'portal.html' . $query;
+            if ($mainPath === 'myopia-low-vision') return 'layanan.html#myopia';
+            if ($mainPath === 'home-care') return 'layanan.html#homecare';
+
+            if (strpos($mainPath, 'produk/') === 0) {
+                return 'produk.html' . $query;
+            }
+            if (strpos($mainPath, 'portal/') === 0) {
+                return 'portal.html' . $query;
+            }
+            return $mainPath . '.html' . $query;
+        }
+
         $path = '/' . ltrim($path, '/');
         if ($path === '//') $path = '/';
         return $basePath . $path;

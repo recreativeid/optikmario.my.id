@@ -310,6 +310,46 @@
       if (floatingIndicator) floatingIndicator.style.backgroundColor = themeColor;
     }
 
+    // GITHUB PAGES LINK GUARDIAN & ROUTE RESOLVER
+    (function() {
+      function fixLinks() {
+        const isGH = window.location.hostname.endsWith('github.io');
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        const repoPrefix = (isGH && pathParts.length > 0) ? '/' + pathParts[0] : '';
+        
+        document.querySelectorAll('a[href]').forEach(function(a) {
+          const href = a.getAttribute('href');
+          if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) {
+            return;
+          }
+          
+          // Prevent links from escaping to root github.io domain (e.g. href="/produk" -> href="/optikmario.my.id/produk.html")
+          if (href.startsWith('/') && !href.startsWith('//')) {
+            if (repoPrefix && !href.startsWith(repoPrefix)) {
+              const clean = href.replace(/^\//, '');
+              const parts = clean.split('?');
+              const route = parts[0];
+              const query = parts[1] ? '?' + parts[1] : '';
+              
+              if (!route || route === '') {
+                a.setAttribute('href', repoPrefix + '/index.html' + query);
+              } else if (['produk', 'layanan', 'lokasi', 'tentang-kami', 'portal'].includes(route)) {
+                a.setAttribute('href', repoPrefix + '/' + route + '.html' + query);
+              } else {
+                a.setAttribute('href', repoPrefix + href);
+              }
+            }
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', fixLinks);
+      } else {
+        fixLinks();
+      }
+    })();
+
     function initThemeSwitcher() {
       const savedTheme = localStorage.getItem('optik_theme') || 'warm';
       applyTheme(savedTheme);

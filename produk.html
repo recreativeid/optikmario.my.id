@@ -229,7 +229,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
     
     <!-- BRAND WORDMARK -->
-    <a href="/" class="flex items-center gap-2 group">
+    <a href="index.html" class="flex items-center gap-2 group">
       <span class="text-2xl font-black tracking-tight text-carbon font-sans">
         OPTIK<span class="font-normal text-stoneMuted">MARIO</span>
       </span>
@@ -238,19 +238,19 @@
 
     <!-- CENTER NAVIGATION LINKS (BAHASA INDONESIA: BERANDA, PRODUK, LAYANAN KLINIS, TENTANG KAMI, KONTAK) -->
     <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-carbon/80">
-      <a href="/" class="hover:text-carbon transition ">
+      <a href="index.html" class="hover:text-carbon transition ">
         Beranda
       </a>
-      <a href="/produk" class="hover:text-carbon transition ">
+      <a href="produk.html" class="hover:text-carbon transition ">
         Produk
       </a>
-      <a href="/layanan" class="hover:text-carbon transition ">
+      <a href="layanan.html" class="hover:text-carbon transition ">
         Layanan Klinis
       </a>
-      <a href="/tentang-kami" class="hover:text-carbon transition ">
+      <a href="tentang-kami.html" class="hover:text-carbon transition ">
         Tentang Kami
       </a>
-      <a href="/lokasi" class="hover:text-carbon transition ">
+      <a href="lokasi.html" class="hover:text-carbon transition ">
         Kontak
       </a>
     </nav>
@@ -275,7 +275,7 @@
       </a>
 
       <!-- Primary Neon Lime Pill Button: [ 👓 Belanja Sekarang ] -->
-      <a href="/produk" 
+      <a href="produk.html" 
          class="inline-flex items-center gap-2 bg-neonLime hover:bg-neonLimeHover text-carbon text-xs font-black uppercase tracking-wider px-5 py-2.5 rounded-full shadow-sm hover:shadow transition transform hover:-translate-y-0.5">
         <i class="fa-solid fa-glasses text-sm"></i>
         <span>Belanja Sekarang</span>
@@ -293,11 +293,11 @@
   <!-- MOBILE NAVIGATION DRAWER (BAHASA INDONESIA) -->
   <div id="mobile-drawer" class="hidden md:hidden bg-canvas border-b border-borderSubtle px-4 pt-4 pb-6">
     <div class="flex flex-col space-y-3 text-xs font-bold uppercase tracking-wider text-carbon">
-      <a href="/" class="py-2.5 px-4 rounded-xl bg-surface transition">Beranda</a>
-      <a href="/produk" class="py-2.5 px-4 rounded-xl bg-surface transition">Produk (Luniva Eyewear)</a>
-      <a href="/layanan" class="py-2.5 px-4 rounded-xl bg-surface transition">Layanan Klinis & Optometri</a>
-      <a href="/tentang-kami" class="py-2.5 px-4 rounded-xl bg-surface transition">Tentang Kami</a>
-      <a href="/lokasi" class="py-2.5 px-4 rounded-xl bg-surface transition">Kontak & Lokasi Cabang</a>
+      <a href="index.html" class="py-2.5 px-4 rounded-xl bg-surface transition">Beranda</a>
+      <a href="produk.html" class="py-2.5 px-4 rounded-xl bg-surface transition">Produk (Luniva Eyewear)</a>
+      <a href="layanan.html" class="py-2.5 px-4 rounded-xl bg-surface transition">Layanan Klinis & Optometri</a>
+      <a href="tentang-kami.html" class="py-2.5 px-4 rounded-xl bg-surface transition">Tentang Kami</a>
+      <a href="lokasi.html" class="py-2.5 px-4 rounded-xl bg-surface transition">Kontak & Lokasi Cabang</a>
       
       <div class="pt-3 border-t border-borderSubtle flex flex-col gap-2">
         <!-- Mobile Theme Toggle -->
@@ -347,7 +347,7 @@
     <div class="bg-surface p-4 sm:p-6 rounded-3xl border border-borderSubtle shadow-sm mb-12">
       
       <!-- Search Input Form -->
-      <form action="/produk" method="GET" class="mb-5">
+      <form action="produk.html" method="GET" class="mb-5">
         <div class="flex items-center gap-2 bg-canvas border border-borderSubtle rounded-full px-4 py-3 focus-within:border-carbon transition shadow-inner">
           <i class="fa-solid fa-magnifying-glass text-stoneMuted text-xs ml-1"></i>
           <input type="text" name="search" value="" 
@@ -361,20 +361,25 @@
 
       <!-- Category Filter Pills (Horizontal Scroll) -->
       <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
-                            <a href="/produk?kategori=semua" 
-             class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-neonLime text-carbon border-neonLime font-black shadow-sm">
+                            <a href="produk.html?kategori=semua" 
+             class="category-pill whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-neonLime text-carbon border-neonLime font-black shadow-sm"
+             data-slug="semua">
             Semua Produk          </a>
-                            <a href="/produk?kategori=frame-kacamata" 
-             class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-canvas text-carbon hover:bg-white border-borderSubtle">
+                            <a href="produk.html?kategori=frame-kacamata" 
+             class="category-pill whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-canvas text-carbon hover:bg-white border-borderSubtle"
+             data-slug="frame-kacamata">
             Frame Kacamata          </a>
-                            <a href="/produk?kategori=lensa-kacamata" 
-             class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-canvas text-carbon hover:bg-white border-borderSubtle">
+                            <a href="produk.html?kategori=lensa-kacamata" 
+             class="category-pill whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-canvas text-carbon hover:bg-white border-borderSubtle"
+             data-slug="lensa-kacamata">
             Lensa Kacamata          </a>
-                            <a href="/produk?kategori=kacamata-khusus" 
-             class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-canvas text-carbon hover:bg-white border-borderSubtle">
+                            <a href="produk.html?kategori=kacamata-khusus" 
+             class="category-pill whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-canvas text-carbon hover:bg-white border-borderSubtle"
+             data-slug="kacamata-khusus">
             Kacamata Baca & Khusus          </a>
-                            <a href="/produk?kategori=aksesoris" 
-             class="whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-canvas text-carbon hover:bg-white border-borderSubtle">
+                            <a href="produk.html?kategori=aksesoris" 
+             class="category-pill whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-canvas text-carbon hover:bg-white border-borderSubtle"
+             data-slug="aksesoris">
             Aksesori & Anti-Fog          </a>
               </div>
 
@@ -383,7 +388,7 @@
     <!-- PRODUCT COUNT & STATUS -->
     <div class="flex items-center justify-between text-xs text-stoneMuted mb-8 px-1">
       <div>
-        Menampilkan <strong>42</strong> model frame terverifikasi
+        Menampilkan <strong id="product-count-display">42</strong> model frame terverifikasi
       </div>
       <div class="flex items-center gap-2">
         <span class="w-2 h-2 rounded-full bg-neonLime"></span>
@@ -393,13 +398,16 @@
 
     <!-- PRODUCT GRID (2 COLS ON MOBILE, 4 COLS ON DESKTOP) -->
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="aksesoris"
+     data-title="luniva - cleaner pembersih kacamata - cleaner ao 50ml (cairan multiguna)"
+     data-shape="aksesori perawatan lensa">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-cleaner-pembersih-kacamata-cleaner-ao-50ml-caira" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Cleaner-Pembersih-Kacamata-Cleaner-AO-50ML-(Cairan-Multiguna)-i.1511744249.44324873382" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Cleaner Pembersih Kacamata - Cleaner AO 50ML (Cairan Multiguna)">
+       title="Lihat detail & beli di Shopee: Luniva - Cleaner Pembersih Kacamata - Cleaner AO 50ML (Cairan Multiguna)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-cleaner-pembersih-kacamata-cleaner-ao-50ml-caira.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -407,11 +415,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -432,7 +440,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-cleaner-pembersih-kacamata-cleaner-ao-50ml-caira" 
+        <a href="https://shopee.co.id/Luniva-Cleaner-Pembersih-Kacamata-Cleaner-AO-50ML-(Cairan-Multiguna)-i.1511744249.44324873382" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Cleaner Pembersih Kacamata - Cleaner AO 50ML (Cairan Multiguna)">
           Luniva - Cleaner Pembersih Kacamata - Cleaner AO 50ML (Cairan Multiguna)        </a>
@@ -447,8 +455,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-cleaner-pembersih-kacamata-cleaner-ao-50ml-caira" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Cleaner-Pembersih-Kacamata-Cleaner-AO-50ML-(Cairan-Multiguna)-i.1511744249.44324873382" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -472,13 +480,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata xyara (kacamata soft cat eye)"
+     data-shape="cat-eye modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-xyara-kacamata-soft-cat-eye" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Xyara-(Kacamata-Soft-Cat-Eye)-i.1511744249.52021941392" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Xyara (Kacamata Soft Cat Eye)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Xyara (Kacamata Soft Cat Eye)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-xyara-kacamata-soft-cat-eye.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -486,11 +497,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -511,7 +522,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-xyara-kacamata-soft-cat-eye" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Xyara-(Kacamata-Soft-Cat-Eye)-i.1511744249.52021941392" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Xyara (Kacamata Soft Cat Eye)">
           Luniva - Frame Kacamata Xyara (Kacamata Soft Cat Eye)        </a>
@@ -526,8 +537,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-xyara-kacamata-soft-cat-eye" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Xyara-(Kacamata-Soft-Cat-Eye)-i.1511744249.52021941392" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -551,13 +562,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata kids 7603 - kacamata anak-anak (kacamata kotak)"
+     data-shape="square modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-kids-7603-kacamata-anak-anak-kaca" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Kids-7603-Kacamata-Anak-Anak-(Kacamata-Kotak)-i.1511744249.45771962071" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Kids 7603 - Kacamata Anak-Anak (Kacamata Kotak)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Kids 7603 - Kacamata Anak-Anak (Kacamata Kotak)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-kids-7603-kacamata-anak-anak-kaca.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -565,11 +579,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -590,7 +604,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-kids-7603-kacamata-anak-anak-kaca" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Kids-7603-Kacamata-Anak-Anak-(Kacamata-Kotak)-i.1511744249.45771962071" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Kids 7603 - Kacamata Anak-Anak (Kacamata Kotak)">
           Luniva - Frame Kacamata Kids 7603 - Kacamata Anak-Anak (Kacamata Kotak)        </a>
@@ -605,8 +619,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-kids-7603-kacamata-anak-anak-kaca" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Kids-7603-Kacamata-Anak-Anak-(Kacamata-Kotak)-i.1511744249.45771962071" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -630,13 +644,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="aksesoris"
+     data-title="luniva - lap antifog domas - hilangkan embun/uap &amp; tahan lama"
+     data-shape="aksesori perawatan lensa">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-lap-antifog-domas-hilangkan-embun-uap-tahan-lama" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Lap-Antifog-Domas-Hilangkan-Embun-Uap-Tahan-Lama-i.1511744249.43550415619" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Lap Antifog Domas - Hilangkan Embun/Uap &amp; Tahan Lama">
+       title="Lihat detail & beli di Shopee: Luniva - Lap Antifog Domas - Hilangkan Embun/Uap &amp; Tahan Lama">
       
       <img src="/optikmario.my.id/public/images/products/luniva-lap-antifog-domas-hilangkan-embun-uap-tahan-lama.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -644,11 +661,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -669,7 +686,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-lap-antifog-domas-hilangkan-embun-uap-tahan-lama" 
+        <a href="https://shopee.co.id/Luniva-Lap-Antifog-Domas-Hilangkan-Embun-Uap-Tahan-Lama-i.1511744249.43550415619" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Lap Antifog Domas - Hilangkan Embun/Uap &amp; Tahan Lama">
           Luniva - Lap Antifog Domas - Hilangkan Embun/Uap &amp; Tahan Lama        </a>
@@ -684,8 +701,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-lap-antifog-domas-hilangkan-embun-uap-tahan-lama" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Lap-Antifog-Domas-Hilangkan-Embun-Uap-Tahan-Lama-i.1511744249.43550415619" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -709,13 +726,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata young horien 55030 (kacamata square unisex)"
+     data-shape="square modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-young-horien-55030-kacamata-squar" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Young-Horien-55030-(Kacamata-Square-Unisex)-i.1511744249.51772003228" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Young Horien 55030 (Kacamata Square Unisex)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Young Horien 55030 (Kacamata Square Unisex)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-young-horien-55030-kacamata-squar.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -723,11 +743,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -748,7 +768,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-young-horien-55030-kacamata-squar" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Young-Horien-55030-(Kacamata-Square-Unisex)-i.1511744249.51772003228" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Young Horien 55030 (Kacamata Square Unisex)">
           Luniva - Frame Kacamata Young Horien 55030 (Kacamata Square Unisex)        </a>
@@ -763,8 +783,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-young-horien-55030-kacamata-squar" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Young-Horien-55030-(Kacamata-Square-Unisex)-i.1511744249.51772003228" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -788,13 +808,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="lensa-kacamata"
+     data-title="luniva eyewear - lensa bluechromic sph/cyl"
+     data-shape="precision edging digital">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-eyewear-lensa-bluechromic-sph-cyl" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Eyewear-Lensa-Bluechromic-Sph-Cyl-i.1511744249.40328736403" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva Eyewear - Lensa Bluechromic Sph/Cyl">
+       title="Lihat detail & beli di Shopee: Luniva Eyewear - Lensa Bluechromic Sph/Cyl">
       
       <img src="/optikmario.my.id/public/images/products/luniva-eyewear-lensa-bluechromic-sph-cyl.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -802,11 +825,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -827,7 +850,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-eyewear-lensa-bluechromic-sph-cyl" 
+        <a href="https://shopee.co.id/Luniva-Eyewear-Lensa-Bluechromic-Sph-Cyl-i.1511744249.40328736403" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva Eyewear - Lensa Bluechromic Sph/Cyl">
           Luniva Eyewear - Lensa Bluechromic Sph/Cyl        </a>
@@ -842,8 +865,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-eyewear-lensa-bluechromic-sph-cyl" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Eyewear-Lensa-Bluechromic-Sph-Cyl-i.1511744249.40328736403" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -867,13 +890,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata lookface 2528 - lookface collection (kacamata persegi)"
+     data-shape="rectangular formal">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-lookface-2528-lookface-collection" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Lookface-2528-Lookface-Collection-(Kacamata-Persegi)-i.1511744249.56572121940" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Lookface 2528 - Lookface Collection (Kacamata Persegi)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Lookface 2528 - Lookface Collection (Kacamata Persegi)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-lookface-2528-lookface-collection.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -881,11 +907,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -906,7 +932,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-lookface-2528-lookface-collection" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Lookface-2528-Lookface-Collection-(Kacamata-Persegi)-i.1511744249.56572121940" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Lookface 2528 - Lookface Collection (Kacamata Persegi)">
           Luniva - Frame Kacamata Lookface 2528 - Lookface Collection (Kacamata Persegi)        </a>
@@ -921,8 +947,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-lookface-2528-lookface-collection" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Lookface-2528-Lookface-Collection-(Kacamata-Persegi)-i.1511744249.56572121940" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -946,13 +972,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata lookface 1991 - lookface collections (kacamata persegi)"
+     data-shape="rectangular formal">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-lookface-1991-lookface-collection" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Lookface-1991-Lookface-Collections-(Kacamata-Persegi)-i.1511744249.49772183776" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Lookface 1991 - Lookface Collections (Kacamata Persegi)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Lookface 1991 - Lookface Collections (Kacamata Persegi)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-lookface-1991-lookface-collection.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -960,11 +989,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -985,7 +1014,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-lookface-1991-lookface-collection" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Lookface-1991-Lookface-Collections-(Kacamata-Persegi)-i.1511744249.49772183776" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Lookface 1991 - Lookface Collections (Kacamata Persegi)">
           Luniva - Frame Kacamata Lookface 1991 - Lookface Collections (Kacamata Persegi)        </a>
@@ -1000,8 +1029,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-lookface-1991-lookface-collection" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Lookface-1991-Lookface-Collections-(Kacamata-Persegi)-i.1511744249.49772183776" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1025,13 +1054,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata lookface 1003 - lookface collections (kacamata soft cat eye))"
+     data-shape="cat-eye modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-lookface-1003-lookface-collection" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Lookface-1003-Lookface-Collections-(Kacamata-Soft-Cat-Eye))-i.1511744249.57472108611" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Lookface 1003 - Lookface Collections (Kacamata Soft Cat Eye))">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Lookface 1003 - Lookface Collections (Kacamata Soft Cat Eye))">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-lookface-1003-lookface-collection.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1039,11 +1071,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1064,7 +1096,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-lookface-1003-lookface-collection" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Lookface-1003-Lookface-Collections-(Kacamata-Soft-Cat-Eye))-i.1511744249.57472108611" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Lookface 1003 - Lookface Collections (Kacamata Soft Cat Eye))">
           Luniva - Frame Kacamata Lookface 1003 - Lookface Collections (Kacamata Soft Cat Eye))        </a>
@@ -1079,8 +1111,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-lookface-1003-lookface-collection" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Lookface-1003-Lookface-Collections-(Kacamata-Soft-Cat-Eye))-i.1511744249.57472108611" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1104,13 +1136,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata owen 5602 (kacamata square unisex)"
+     data-shape="square modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-owen-5602-kacamata-square-unisex" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Owen-5602-(Kacamata-Square-Unisex)-i.1511744249.51821942724" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Owen 5602 (Kacamata Square Unisex)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Owen 5602 (Kacamata Square Unisex)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-owen-5602-kacamata-square-unisex.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1118,11 +1153,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1143,7 +1178,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-owen-5602-kacamata-square-unisex" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Owen-5602-(Kacamata-Square-Unisex)-i.1511744249.51821942724" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Owen 5602 (Kacamata Square Unisex)">
           Luniva - Frame Kacamata Owen 5602 (Kacamata Square Unisex)        </a>
@@ -1158,8 +1193,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-owen-5602-kacamata-square-unisex" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Owen-5602-(Kacamata-Square-Unisex)-i.1511744249.51821942724" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1183,13 +1218,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva eyewear | frame arkema 6804 (kacamata kotak)"
+     data-shape="square modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-eyewear-frame-arkema-6804-kacamata-kotak" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Eyewear-Frame-Arkema-6804-(Kacamata-Kotak)-i.1511744249.49619608519" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva Eyewear | Frame Arkema 6804 (Kacamata Kotak)">
+       title="Lihat detail & beli di Shopee: Luniva Eyewear | Frame Arkema 6804 (Kacamata Kotak)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-eyewear-frame-arkema-6804-kacamata-kotak.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1197,11 +1235,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1222,7 +1260,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-eyewear-frame-arkema-6804-kacamata-kotak" 
+        <a href="https://shopee.co.id/Luniva-Eyewear-Frame-Arkema-6804-(Kacamata-Kotak)-i.1511744249.49619608519" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva Eyewear | Frame Arkema 6804 (Kacamata Kotak)">
           Luniva Eyewear | Frame Arkema 6804 (Kacamata Kotak)        </a>
@@ -1237,8 +1275,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-eyewear-frame-arkema-6804-kacamata-kotak" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Eyewear-Frame-Arkema-6804-(Kacamata-Kotak)-i.1511744249.49619608519" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1262,13 +1300,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva eyewear | frame plastik ebony 8128 (kacamata persegi)"
+     data-shape="rectangular formal">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-eyewear-frame-plastik-ebony-8128-kacamata-perseg" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Eyewear-Frame-Plastik-Ebony-8128-(Kacamata-Persegi)-i.1511744249.49561371511" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva Eyewear | Frame Plastik Ebony 8128 (Kacamata Persegi)">
+       title="Lihat detail & beli di Shopee: Luniva Eyewear | Frame Plastik Ebony 8128 (Kacamata Persegi)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-eyewear-frame-plastik-ebony-8128-kacamata-perseg.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1276,11 +1317,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1301,7 +1342,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-eyewear-frame-plastik-ebony-8128-kacamata-perseg" 
+        <a href="https://shopee.co.id/Luniva-Eyewear-Frame-Plastik-Ebony-8128-(Kacamata-Persegi)-i.1511744249.49561371511" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva Eyewear | Frame Plastik Ebony 8128 (Kacamata Persegi)">
           Luniva Eyewear | Frame Plastik Ebony 8128 (Kacamata Persegi)        </a>
@@ -1316,8 +1357,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-eyewear-frame-plastik-ebony-8128-kacamata-perseg" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Eyewear-Frame-Plastik-Ebony-8128-(Kacamata-Persegi)-i.1511744249.49561371511" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1341,13 +1382,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva eyewear | frame plastik arkema 6084 (kacamata round)"
+     data-shape="round / lingkar klasik">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-eyewear-frame-plastik-arkema-6084-kacamata-round" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Eyewear-Frame-Plastik-Arkema-6084-(Kacamata-Round)-i.1511744249.47519557887" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva Eyewear | Frame Plastik Arkema 6084 (Kacamata Round)">
+       title="Lihat detail & beli di Shopee: Luniva Eyewear | Frame Plastik Arkema 6084 (Kacamata Round)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-eyewear-frame-plastik-arkema-6084-kacamata-round.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1355,11 +1399,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1380,7 +1424,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-eyewear-frame-plastik-arkema-6084-kacamata-round" 
+        <a href="https://shopee.co.id/Luniva-Eyewear-Frame-Plastik-Arkema-6084-(Kacamata-Round)-i.1511744249.47519557887" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva Eyewear | Frame Plastik Arkema 6084 (Kacamata Round)">
           Luniva Eyewear | Frame Plastik Arkema 6084 (Kacamata Round)        </a>
@@ -1395,8 +1439,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-eyewear-frame-plastik-arkema-6084-kacamata-round" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Eyewear-Frame-Plastik-Arkema-6084-(Kacamata-Round)-i.1511744249.47519557887" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1420,13 +1464,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata republik 6026 - republik collection (kacamata hexagon)"
+     data-shape="hexagonal geometris">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-republik-6026-republik-collection" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-6026-Republik-Collection-(Kacamata-Hexagon)-i.1511744249.42919608397" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Republik 6026 - Republik Collection (Kacamata Hexagon)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Republik 6026 - Republik Collection (Kacamata Hexagon)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-republik-6026-republik-collection.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1434,11 +1481,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1459,7 +1506,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-republik-6026-republik-collection" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-6026-Republik-Collection-(Kacamata-Hexagon)-i.1511744249.42919608397" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Republik 6026 - Republik Collection (Kacamata Hexagon)">
           Luniva - Frame Kacamata Republik 6026 - Republik Collection (Kacamata Hexagon)        </a>
@@ -1474,8 +1521,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-republik-6026-republik-collection" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-6026-Republik-Collection-(Kacamata-Hexagon)-i.1511744249.42919608397" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1499,13 +1546,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata republik 8808 - republik collection (kacamata persegi)"
+     data-shape="rectangular formal">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-republik-8808-republik-collection" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-8808-Republik-Collection-(Kacamata-Persegi)-i.1511744249.41919723616" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Republik 8808 - Republik Collection (Kacamata Persegi)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Republik 8808 - Republik Collection (Kacamata Persegi)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-republik-8808-republik-collection.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1513,11 +1563,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1538,7 +1588,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-republik-8808-republik-collection" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-8808-Republik-Collection-(Kacamata-Persegi)-i.1511744249.41919723616" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Republik 8808 - Republik Collection (Kacamata Persegi)">
           Luniva - Frame Kacamata Republik 8808 - Republik Collection (Kacamata Persegi)        </a>
@@ -1553,8 +1603,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-republik-8808-republik-collection" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-8808-Republik-Collection-(Kacamata-Persegi)-i.1511744249.41919723616" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1578,13 +1628,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata republik 6080 - republik collection (kacamata rounded)"
+     data-shape="round / lingkar klasik">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-republik-6080-republik-collection" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-6080-Republik-Collection-(Kacamata-Rounded)-i.1511744249.41269616087" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Republik 6080 - Republik Collection (Kacamata Rounded)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Republik 6080 - Republik Collection (Kacamata Rounded)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-republik-6080-republik-collection.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1592,11 +1645,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1617,7 +1670,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-republik-6080-republik-collection" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-6080-Republik-Collection-(Kacamata-Rounded)-i.1511744249.41269616087" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Republik 6080 - Republik Collection (Kacamata Rounded)">
           Luniva - Frame Kacamata Republik 6080 - Republik Collection (Kacamata Rounded)        </a>
@@ -1632,8 +1685,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-republik-6080-republik-collection" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-6080-Republik-Collection-(Kacamata-Rounded)-i.1511744249.41269616087" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1657,13 +1710,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata black cobra b009 - black cobra collection (kacamata persegi)"
+     data-shape="rectangular formal">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b009-black-cobra-coll" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B009-Black-Cobra-Collection-(Kacamata-Persegi)-i.1511744249.58011753391" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Black Cobra B009 - Black Cobra Collection (Kacamata Persegi)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Black Cobra B009 - Black Cobra Collection (Kacamata Persegi)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-black-cobra-b009-black-cobra-coll.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1671,11 +1727,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1696,7 +1752,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-black-cobra-b009-black-cobra-coll" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B009-Black-Cobra-Collection-(Kacamata-Persegi)-i.1511744249.58011753391" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Black Cobra B009 - Black Cobra Collection (Kacamata Persegi)">
           Luniva - Frame Kacamata Black Cobra B009 - Black Cobra Collection (Kacamata Persegi)        </a>
@@ -1711,8 +1767,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b009-black-cobra-coll" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B009-Black-Cobra-Collection-(Kacamata-Persegi)-i.1511744249.58011753391" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1736,13 +1792,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata faye 8509 - faye collection (kacamata kotak)"
+     data-shape="square modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-faye-8509-faye-collection-kacamat" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-8509-Faye-Collection-(Kacamata-Kotak)-i.1511744249.55421834685" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Faye 8509 - Faye Collection (Kacamata Kotak)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Faye 8509 - Faye Collection (Kacamata Kotak)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-faye-8509-faye-collection-kacamat.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1750,11 +1809,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1775,7 +1834,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-faye-8509-faye-collection-kacamat" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-8509-Faye-Collection-(Kacamata-Kotak)-i.1511744249.55421834685" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Faye 8509 - Faye Collection (Kacamata Kotak)">
           Luniva - Frame Kacamata Faye 8509 - Faye Collection (Kacamata Kotak)        </a>
@@ -1790,8 +1849,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-faye-8509-faye-collection-kacamat" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-8509-Faye-Collection-(Kacamata-Kotak)-i.1511744249.55421834685" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1815,13 +1874,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata faye 8503 - faye collection (kacamata kotak)"
+     data-shape="square modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-faye-8503-faye-collection-kacamat" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-8503-Faye-Collection-(Kacamata-Kotak)-i.1511744249.55221829551" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Faye 8503 - Faye Collection (Kacamata Kotak)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Faye 8503 - Faye Collection (Kacamata Kotak)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-faye-8503-faye-collection-kacamat.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1829,11 +1891,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1854,7 +1916,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-faye-8503-faye-collection-kacamat" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-8503-Faye-Collection-(Kacamata-Kotak)-i.1511744249.55221829551" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Faye 8503 - Faye Collection (Kacamata Kotak)">
           Luniva - Frame Kacamata Faye 8503 - Faye Collection (Kacamata Kotak)        </a>
@@ -1869,8 +1931,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-faye-8503-faye-collection-kacamat" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-8503-Faye-Collection-(Kacamata-Kotak)-i.1511744249.55221829551" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1894,13 +1956,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata black cobra b005 - black cobra collection (kacamata persegi)"
+     data-shape="rectangular formal">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b005-black-cobra-coll" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B005-Black-Cobra-Collection-(Kacamata-persegi)-i.1511744249.52303072768" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Black Cobra B005 - Black Cobra Collection (Kacamata persegi)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Black Cobra B005 - Black Cobra Collection (Kacamata persegi)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-black-cobra-b005-black-cobra-coll.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1908,11 +1973,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -1933,7 +1998,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-black-cobra-b005-black-cobra-coll" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B005-Black-Cobra-Collection-(Kacamata-persegi)-i.1511744249.52303072768" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Black Cobra B005 - Black Cobra Collection (Kacamata persegi)">
           Luniva - Frame Kacamata Black Cobra B005 - Black Cobra Collection (Kacamata persegi)        </a>
@@ -1948,8 +2013,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b005-black-cobra-coll" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B005-Black-Cobra-Collection-(Kacamata-persegi)-i.1511744249.52303072768" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -1973,13 +2038,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata black cobra b010 - black cobra collection (kacamata persegi)"
+     data-shape="rectangular formal">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b010-black-cobra-coll" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B010-Black-Cobra-Collection-(Kacamata-Persegi)-i.1511744249.47108737275" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Black Cobra B010 - Black Cobra Collection (Kacamata Persegi)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Black Cobra B010 - Black Cobra Collection (Kacamata Persegi)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-black-cobra-b010-black-cobra-coll.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -1987,11 +2055,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2012,7 +2080,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-black-cobra-b010-black-cobra-coll" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B010-Black-Cobra-Collection-(Kacamata-Persegi)-i.1511744249.47108737275" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Black Cobra B010 - Black Cobra Collection (Kacamata Persegi)">
           Luniva - Frame Kacamata Black Cobra B010 - Black Cobra Collection (Kacamata Persegi)        </a>
@@ -2027,8 +2095,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b010-black-cobra-coll" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B010-Black-Cobra-Collection-(Kacamata-Persegi)-i.1511744249.47108737275" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2052,13 +2120,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata black cobra b007 - black cobra collection (kacamata cat eye)"
+     data-shape="cat-eye modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b007-black-cobra-coll" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B007-Black-Cobra-Collection-(Kacamata-Cat-Eye)-i.1511744249.54761346986" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Black Cobra B007 - Black Cobra Collection (Kacamata Cat Eye)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Black Cobra B007 - Black Cobra Collection (Kacamata Cat Eye)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-black-cobra-b007-black-cobra-coll.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2066,11 +2137,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2091,7 +2162,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-black-cobra-b007-black-cobra-coll" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B007-Black-Cobra-Collection-(Kacamata-Cat-Eye)-i.1511744249.54761346986" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Black Cobra B007 - Black Cobra Collection (Kacamata Cat Eye)">
           Luniva - Frame Kacamata Black Cobra B007 - Black Cobra Collection (Kacamata Cat Eye)        </a>
@@ -2106,8 +2177,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b007-black-cobra-coll" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B007-Black-Cobra-Collection-(Kacamata-Cat-Eye)-i.1511744249.54761346986" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2131,13 +2202,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata black cobra b006 - black cobra collection (kacamata cat eye)"
+     data-shape="cat-eye modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b006-black-cobra-coll" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B006-Black-Cobra-Collection-(Kacamata-Cat-Eye)-i.1511744249.47203082575" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Black Cobra B006 - Black Cobra Collection (Kacamata Cat Eye)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Black Cobra B006 - Black Cobra Collection (Kacamata Cat Eye)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-black-cobra-b006-black-cobra-coll.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2145,11 +2219,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2170,7 +2244,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-black-cobra-b006-black-cobra-coll" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B006-Black-Cobra-Collection-(Kacamata-Cat-Eye)-i.1511744249.47203082575" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Black Cobra B006 - Black Cobra Collection (Kacamata Cat Eye)">
           Luniva - Frame Kacamata Black Cobra B006 - Black Cobra Collection (Kacamata Cat Eye)        </a>
@@ -2185,8 +2259,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b006-black-cobra-coll" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B006-Black-Cobra-Collection-(Kacamata-Cat-Eye)-i.1511744249.47203082575" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2210,13 +2284,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="aksesoris"
+     data-title="luniva - cleaner pembersih kacamata anti embun - cleaner leinz 50ml (cairan pembersih anti embun)"
+     data-shape="aksesori perawatan lensa">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-cleaner-pembersih-kacamata-anti-embun-cleaner-le" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Cleaner-Pembersih-Kacamata-Anti-Embun-Cleaner-Leinz-50ML-(Cairan-Pembersih-Anti-Embun)-i.1511744249.54965706519" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Cleaner Pembersih Kacamata Anti Embun - Cleaner Leinz 50ML (Cairan Pembersih Anti Embun)">
+       title="Lihat detail & beli di Shopee: Luniva - Cleaner Pembersih Kacamata Anti Embun - Cleaner Leinz 50ML (Cairan Pembersih Anti Embun)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-cleaner-pembersih-kacamata-anti-embun-cleaner-le.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2224,11 +2301,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2249,7 +2326,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-cleaner-pembersih-kacamata-anti-embun-cleaner-le" 
+        <a href="https://shopee.co.id/Luniva-Cleaner-Pembersih-Kacamata-Anti-Embun-Cleaner-Leinz-50ML-(Cairan-Pembersih-Anti-Embun)-i.1511744249.54965706519" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Cleaner Pembersih Kacamata Anti Embun - Cleaner Leinz 50ML (Cairan Pembersih Anti Embun)">
           Luniva - Cleaner Pembersih Kacamata Anti Embun - Cleaner Leinz 50ML (Cairan Pembersih Anti Embun)        </a>
@@ -2264,8 +2341,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-cleaner-pembersih-kacamata-anti-embun-cleaner-le" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Cleaner-Pembersih-Kacamata-Anti-Embun-Cleaner-Leinz-50ML-(Cairan-Pembersih-Anti-Embun)-i.1511744249.54965706519" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2289,13 +2366,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="aksesoris"
+     data-title="luniva - sillicon nosepad kacamata"
+     data-shape="modern ergonomic">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-sillicon-nosepad-kacamata" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Sillicon-Nosepad-Kacamata-i.1511744249.54165715578" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Sillicon Nosepad Kacamata">
+       title="Lihat detail & beli di Shopee: Luniva - Sillicon Nosepad Kacamata">
       
       <img src="/optikmario.my.id/public/images/products/luniva-sillicon-nosepad-kacamata.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2303,11 +2383,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2328,7 +2408,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-sillicon-nosepad-kacamata" 
+        <a href="https://shopee.co.id/Luniva-Sillicon-Nosepad-Kacamata-i.1511744249.54165715578" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Sillicon Nosepad Kacamata">
           Luniva - Sillicon Nosepad Kacamata        </a>
@@ -2343,8 +2423,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-sillicon-nosepad-kacamata" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Sillicon-Nosepad-Kacamata-i.1511744249.54165715578" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2368,13 +2448,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="aksesoris"
+     data-title="luniva - lap antifog joorney - hilangkan embun/uap &amp; tahan lama"
+     data-shape="aksesori perawatan lensa">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-lap-antifog-joorney-hilangkan-embun-uap-tahan-la" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Lap-Antifog-Joorney-Hilangkan-Embun-Uap-Tahan-Lama-i.1511744249.47565638441" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Lap Antifog Joorney - Hilangkan Embun/Uap &amp; Tahan Lama">
+       title="Lihat detail & beli di Shopee: Luniva - Lap Antifog Joorney - Hilangkan Embun/Uap &amp; Tahan Lama">
       
       <img src="/optikmario.my.id/public/images/products/luniva-lap-antifog-joorney-hilangkan-embun-uap-tahan-la.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2382,11 +2465,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2407,7 +2490,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-lap-antifog-joorney-hilangkan-embun-uap-tahan-la" 
+        <a href="https://shopee.co.id/Luniva-Lap-Antifog-Joorney-Hilangkan-Embun-Uap-Tahan-Lama-i.1511744249.47565638441" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Lap Antifog Joorney - Hilangkan Embun/Uap &amp; Tahan Lama">
           Luniva - Lap Antifog Joorney - Hilangkan Embun/Uap &amp; Tahan Lama        </a>
@@ -2422,8 +2505,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-lap-antifog-joorney-hilangkan-embun-uap-tahan-la" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Lap-Antifog-Joorney-Hilangkan-Embun-Uap-Tahan-Lama-i.1511744249.47565638441" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2447,13 +2530,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="aksesoris"
+     data-title="luniva - tissue pembersih kacamata - avacon isi 50 (tissue multiguna)"
+     data-shape="aksesori perawatan lensa">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-tissue-pembersih-kacamata-avacon-isi-50-tissue-m" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Tissue-Pembersih-Kacamata-Avacon-Isi-50-(Tissue-Multiguna)-i.1511744249.45403070463" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Tissue Pembersih Kacamata - Avacon Isi 50 (Tissue Multiguna)">
+       title="Lihat detail & beli di Shopee: Luniva - Tissue Pembersih Kacamata - Avacon Isi 50 (Tissue Multiguna)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-tissue-pembersih-kacamata-avacon-isi-50-tissue-m.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2461,11 +2547,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2486,7 +2572,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-tissue-pembersih-kacamata-avacon-isi-50-tissue-m" 
+        <a href="https://shopee.co.id/Luniva-Tissue-Pembersih-Kacamata-Avacon-Isi-50-(Tissue-Multiguna)-i.1511744249.45403070463" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Tissue Pembersih Kacamata - Avacon Isi 50 (Tissue Multiguna)">
           Luniva - Tissue Pembersih Kacamata - Avacon Isi 50 (Tissue Multiguna)        </a>
@@ -2501,8 +2587,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-tissue-pembersih-kacamata-avacon-isi-50-tissue-m" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Tissue-Pembersih-Kacamata-Avacon-Isi-50-(Tissue-Multiguna)-i.1511744249.45403070463" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2526,13 +2612,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="lensa-kacamata"
+     data-title="luniva - lensa bluray sph/cyl"
+     data-shape="precision edging digital">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-lensa-bluray-sph-cyl" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Lensa-Bluray-Sph-Cyl-i.1511744249.57207619213" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Lensa Bluray Sph/Cyl">
+       title="Lihat detail & beli di Shopee: Luniva - Lensa Bluray Sph/Cyl">
       
       <img src="/optikmario.my.id/public/images/products/luniva-lensa-bluray-sph-cyl.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2540,11 +2629,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2565,7 +2654,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-lensa-bluray-sph-cyl" 
+        <a href="https://shopee.co.id/Luniva-Lensa-Bluray-Sph-Cyl-i.1511744249.57207619213" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Lensa Bluray Sph/Cyl">
           Luniva - Lensa Bluray Sph/Cyl        </a>
@@ -2580,8 +2669,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-lensa-bluray-sph-cyl" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Lensa-Bluray-Sph-Cyl-i.1511744249.57207619213" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2605,13 +2694,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="lensa-kacamata"
+     data-title="luniva - lensa progresif multifokus (sph/cyl/add)"
+     data-shape="precision edging digital">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-lensa-progresif-multifokus-sph-cyl-add" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Lensa-Progresif-Multifokus-(sph-cyl-add)-i.1511744249.50764181286" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Lensa Progresif Multifokus (sph/cyl/add)">
+       title="Lihat detail & beli di Shopee: Luniva - Lensa Progresif Multifokus (sph/cyl/add)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-lensa-progresif-multifokus-sph-cyl-add.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2619,11 +2711,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2644,7 +2736,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-lensa-progresif-multifokus-sph-cyl-add" 
+        <a href="https://shopee.co.id/Luniva-Lensa-Progresif-Multifokus-(sph-cyl-add)-i.1511744249.50764181286" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Lensa Progresif Multifokus (sph/cyl/add)">
           Luniva - Lensa Progresif Multifokus (sph/cyl/add)        </a>
@@ -2659,8 +2751,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-lensa-progresif-multifokus-sph-cyl-add" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Lensa-Progresif-Multifokus-(sph-cyl-add)-i.1511744249.50764181286" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2684,13 +2776,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="lensa-kacamata"
+     data-title="luniva - lensa photochromic sph/cyl"
+     data-shape="precision edging digital">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-lensa-photochromic-sph-cyl" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Lensa-Photochromic-Sph-Cyl-i.1511744249.47514179834" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Lensa Photochromic Sph/Cyl">
+       title="Lihat detail & beli di Shopee: Luniva - Lensa Photochromic Sph/Cyl">
       
       <img src="/optikmario.my.id/public/images/products/luniva-lensa-photochromic-sph-cyl.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2698,11 +2793,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2723,7 +2818,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-lensa-photochromic-sph-cyl" 
+        <a href="https://shopee.co.id/Luniva-Lensa-Photochromic-Sph-Cyl-i.1511744249.47514179834" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Lensa Photochromic Sph/Cyl">
           Luniva - Lensa Photochromic Sph/Cyl        </a>
@@ -2738,8 +2833,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-lensa-photochromic-sph-cyl" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Lensa-Photochromic-Sph-Cyl-i.1511744249.47514179834" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2763,13 +2858,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="lensa-kacamata"
+     data-title="luniva - lensa clear antiradiasi sph/cyl"
+     data-shape="precision edging digital">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-lensa-clear-antiradiasi-sph-cyl" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Lensa-Clear-Antiradiasi-Sph-Cyl-i.1511744249.40028679359" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Lensa Clear Antiradiasi Sph/Cyl">
+       title="Lihat detail & beli di Shopee: Luniva - Lensa Clear Antiradiasi Sph/Cyl">
       
       <img src="/optikmario.my.id/public/images/products/luniva-lensa-clear-antiradiasi-sph-cyl.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2777,11 +2875,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2802,7 +2900,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-lensa-clear-antiradiasi-sph-cyl" 
+        <a href="https://shopee.co.id/Luniva-Lensa-Clear-Antiradiasi-Sph-Cyl-i.1511744249.40028679359" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Lensa Clear Antiradiasi Sph/Cyl">
           Luniva - Lensa Clear Antiradiasi Sph/Cyl        </a>
@@ -2817,8 +2915,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-lensa-clear-antiradiasi-sph-cyl" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Lensa-Clear-Antiradiasi-Sph-Cyl-i.1511744249.40028679359" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2842,13 +2940,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="aksesoris"
+     data-title="oculus box plastik tempat menyimpan kacamata"
+     data-shape="modern ergonomic">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/oculus-box-plastik-tempat-menyimpan-kacamata" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/OCULUS-BOX-PLASTIK-TEMPAT-MENYIMPAN-KACAMATA-i.1511744249.51603040783" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide OCULUS BOX PLASTIK TEMPAT MENYIMPAN KACAMATA">
+       title="Lihat detail & beli di Shopee: OCULUS BOX PLASTIK TEMPAT MENYIMPAN KACAMATA">
       
       <img src="/optikmario.my.id/public/images/products/oculus-box-plastik-tempat-menyimpan-kacamata.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2856,11 +2957,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2881,7 +2982,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/oculus-box-plastik-tempat-menyimpan-kacamata" 
+        <a href="https://shopee.co.id/OCULUS-BOX-PLASTIK-TEMPAT-MENYIMPAN-KACAMATA-i.1511744249.51603040783" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="OCULUS BOX PLASTIK TEMPAT MENYIMPAN KACAMATA">
           OCULUS BOX PLASTIK TEMPAT MENYIMPAN KACAMATA        </a>
@@ -2896,8 +2997,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/oculus-box-plastik-tempat-menyimpan-kacamata" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/OCULUS-BOX-PLASTIK-TEMPAT-MENYIMPAN-KACAMATA-i.1511744249.51603040783" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -2921,13 +3022,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="lensa-kacamata"
+     data-title="luniva eyewear | kacamata baca (frame + lensa) antiradiasi"
+     data-shape="slim rectangular">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-eyewear-kacamata-baca-frame-lensa-antiradiasi" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Eyewear-Kacamata-Baca-(Frame-Lensa)-Antiradiasi-i.1511744249.26238086438" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva Eyewear | Kacamata Baca (Frame + Lensa) Antiradiasi">
+       title="Lihat detail & beli di Shopee: Luniva Eyewear | Kacamata Baca (Frame + Lensa) Antiradiasi">
       
       <img src="/optikmario.my.id/public/images/products/luniva-eyewear-kacamata-baca-frame-lensa-antiradiasi.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -2935,11 +3039,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -2960,7 +3064,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-eyewear-kacamata-baca-frame-lensa-antiradiasi" 
+        <a href="https://shopee.co.id/Luniva-Eyewear-Kacamata-Baca-(Frame-Lensa)-Antiradiasi-i.1511744249.26238086438" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva Eyewear | Kacamata Baca (Frame + Lensa) Antiradiasi">
           Luniva Eyewear | Kacamata Baca (Frame + Lensa) Antiradiasi        </a>
@@ -2975,8 +3079,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-eyewear-kacamata-baca-frame-lensa-antiradiasi" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Eyewear-Kacamata-Baca-(Frame-Lensa)-Antiradiasi-i.1511744249.26238086438" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -3000,13 +3104,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata casamorati 327 - casamorati collection (kacamata rounded)"
+     data-shape="round / lingkar klasik">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-casamorati-327-casamorati-collect" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Casamorati-327-Casamorati-Collection-(Kacamata-Rounded)-i.1511744249.43669322074" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Casamorati 327 - Casamorati Collection (Kacamata Rounded)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Casamorati 327 - Casamorati Collection (Kacamata Rounded)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-casamorati-327-casamorati-collect.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -3014,11 +3121,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -3039,7 +3146,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-casamorati-327-casamorati-collect" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Casamorati-327-Casamorati-Collection-(Kacamata-Rounded)-i.1511744249.43669322074" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Casamorati 327 - Casamorati Collection (Kacamata Rounded)">
           Luniva - Frame Kacamata Casamorati 327 - Casamorati Collection (Kacamata Rounded)        </a>
@@ -3054,8 +3161,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-casamorati-327-casamorati-collect" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Casamorati-327-Casamorati-Collection-(Kacamata-Rounded)-i.1511744249.43669322074" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -3079,13 +3186,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="aksesoris"
+     data-title="luniva - lap premium mikrofiber inalite/polycore"
+     data-shape="aksesori perawatan lensa">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-lap-premium-mikrofiber-inalite-polycore" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Lap-Premium-Mikrofiber-Inalite-Polycore-i.1511744249.41500410436" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Lap Premium Mikrofiber Inalite/Polycore">
+       title="Lihat detail & beli di Shopee: Luniva - Lap Premium Mikrofiber Inalite/Polycore">
       
       <img src="/optikmario.my.id/public/images/products/luniva-lap-premium-mikrofiber-inalite-polycore.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -3093,11 +3203,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -3118,7 +3228,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-lap-premium-mikrofiber-inalite-polycore" 
+        <a href="https://shopee.co.id/Luniva-Lap-Premium-Mikrofiber-Inalite-Polycore-i.1511744249.41500410436" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Lap Premium Mikrofiber Inalite/Polycore">
           Luniva - Lap Premium Mikrofiber Inalite/Polycore        </a>
@@ -3133,8 +3243,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-lap-premium-mikrofiber-inalite-polycore" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Lap-Premium-Mikrofiber-Inalite-Polycore-i.1511744249.41500410436" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -3158,13 +3268,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="aksesoris"
+     data-title="luniva - lap mikrofiber"
+     data-shape="aksesori perawatan lensa">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-lap-mikrofiber" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Lap-Mikrofiber-i.1511744249.42000409422" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Lap Mikrofiber">
+       title="Lihat detail & beli di Shopee: Luniva - Lap Mikrofiber">
       
       <img src="/optikmario.my.id/public/images/products/luniva-lap-mikrofiber.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -3172,11 +3285,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -3197,7 +3310,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-lap-mikrofiber" 
+        <a href="https://shopee.co.id/Luniva-Lap-Mikrofiber-i.1511744249.42000409422" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Lap Mikrofiber">
           Luniva - Lap Mikrofiber        </a>
@@ -3212,8 +3325,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-lap-mikrofiber" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Lap-Mikrofiber-i.1511744249.42000409422" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -3237,13 +3350,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata faye 23031 - faye collection (kacamata aviator)"
+     data-shape="aviator pilot classic">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-faye-23031-faye-collection-kacama" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-23031-Faye-Collection-(Kacamata-Aviator)-i.1511744249.55371874985" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Faye 23031 - Faye Collection (Kacamata Aviator)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Faye 23031 - Faye Collection (Kacamata Aviator)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-faye-23031-faye-collection-kacama.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -3251,11 +3367,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -3276,7 +3392,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-faye-23031-faye-collection-kacama" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-23031-Faye-Collection-(Kacamata-Aviator)-i.1511744249.55371874985" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Faye 23031 - Faye Collection (Kacamata Aviator)">
           Luniva - Frame Kacamata Faye 23031 - Faye Collection (Kacamata Aviator)        </a>
@@ -3291,8 +3407,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-faye-23031-faye-collection-kacama" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-23031-Faye-Collection-(Kacamata-Aviator)-i.1511744249.55371874985" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -3316,13 +3432,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata faye 8518 - faye collection (kacamata kotak)"
+     data-shape="square modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-faye-8518-faye-collection-kacamat" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-8518-Faye-Collection-(Kacamata-Kotak)-i.1511744249.40036882597" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Faye 8518 - Faye Collection (Kacamata Kotak)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Faye 8518 - Faye Collection (Kacamata Kotak)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-faye-8518-faye-collection-kacamat.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -3330,11 +3449,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -3355,7 +3474,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-faye-8518-faye-collection-kacamat" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-8518-Faye-Collection-(Kacamata-Kotak)-i.1511744249.40036882597" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Faye 8518 - Faye Collection (Kacamata Kotak)">
           Luniva - Frame Kacamata Faye 8518 - Faye Collection (Kacamata Kotak)        </a>
@@ -3370,8 +3489,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-faye-8518-faye-collection-kacamat" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Faye-8518-Faye-Collection-(Kacamata-Kotak)-i.1511744249.40036882597" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -3395,13 +3514,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata alora 006 (kacamata persegi)"
+     data-shape="rectangular formal">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-alora-006-kacamata-persegi" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Alora-006-(Kacamata-Persegi)-i.1511744249.56871857477" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Alora 006 (Kacamata Persegi)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Alora 006 (Kacamata Persegi)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-alora-006-kacamata-persegi.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -3409,11 +3531,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -3434,7 +3556,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-alora-006-kacamata-persegi" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Alora-006-(Kacamata-Persegi)-i.1511744249.56871857477" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Alora 006 (Kacamata Persegi)">
           Luniva - Frame Kacamata Alora 006 (Kacamata Persegi)        </a>
@@ -3449,8 +3571,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-alora-006-kacamata-persegi" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Alora-006-(Kacamata-Persegi)-i.1511744249.56871857477" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -3474,13 +3596,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="kacamata-khusus"
+     data-title="luniva - frame kacamata hitam pasca operasi katarak (bisa harian) | perlindungan semua sisi | free cleaner ao 50ml"
+     data-shape="wrap-around protective">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-hitam-pasca-operasi-katarak-bisa-" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Hitam-Pasca-Operasi-Katarak-(Bisa-Harian)-Perlindungan-Semua-Sisi-Free-Cleaner-AO-50ML-i.1511744249.40409280225" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Hitam Pasca Operasi Katarak (Bisa Harian) | Perlindungan Semua Sisi | Free Cleaner AO 50ML">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Hitam Pasca Operasi Katarak (Bisa Harian) | Perlindungan Semua Sisi | Free Cleaner AO 50ML">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-hitam-pasca-operasi-katarak-bisa-.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -3488,11 +3613,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -3513,7 +3638,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-hitam-pasca-operasi-katarak-bisa-" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Hitam-Pasca-Operasi-Katarak-(Bisa-Harian)-Perlindungan-Semua-Sisi-Free-Cleaner-AO-50ML-i.1511744249.40409280225" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Hitam Pasca Operasi Katarak (Bisa Harian) | Perlindungan Semua Sisi | Free Cleaner AO 50ML">
           Luniva - Frame Kacamata Hitam Pasca Operasi Katarak (Bisa Harian) | Perlindungan Semua Sisi | Free Cleaner AO 50ML        </a>
@@ -3528,8 +3653,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-hitam-pasca-operasi-katarak-bisa-" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Hitam-Pasca-Operasi-Katarak-(Bisa-Harian)-Perlindungan-Semua-Sisi-Free-Cleaner-AO-50ML-i.1511744249.40409280225" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -3553,13 +3678,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata black cobra b004 - black cobra collection (kacamata kotak)"
+     data-shape="square modern">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b004-black-cobra-coll" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B004-Black-Cobra-Collection-(Kacamata-Kotak)-i.1511744249.43377241245" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Black Cobra B004 - Black Cobra Collection (Kacamata Kotak)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Black Cobra B004 - Black Cobra Collection (Kacamata Kotak)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-black-cobra-b004-black-cobra-coll.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -3567,11 +3695,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -3592,7 +3720,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-black-cobra-b004-black-cobra-coll" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B004-Black-Cobra-Collection-(Kacamata-Kotak)-i.1511744249.43377241245" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Black Cobra B004 - Black Cobra Collection (Kacamata Kotak)">
           Luniva - Frame Kacamata Black Cobra B004 - Black Cobra Collection (Kacamata Kotak)        </a>
@@ -3607,8 +3735,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-black-cobra-b004-black-cobra-coll" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Black-Cobra-B004-Black-Cobra-Collection-(Kacamata-Kotak)-i.1511744249.43377241245" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -3632,13 +3760,16 @@
   </div>
 
 </div>
-                  <div class="group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                  <div class="product-item group bg-surface rounded-3xl p-3.5 sm:p-4 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+     data-category="frame-kacamata"
+     data-title="luniva - frame kacamata republik 8807 - republik collection (kacamata persegi)"
+     data-shape="rectangular formal">
   
   <div>
-    <!-- Product Image Container: Klik membuka Halaman Detail Produk & Galeri Slider -->
-    <a href="/produk/luniva-frame-kacamata-republik-8807-republik-collection" 
+    <!-- Product Image Container: Klik membuka Halaman Resmi Shopee Luniva -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-8807-Republik-Collection-(Kacamata-Persegi)-i.1511744249.27391693951" target="_blank" rel="noopener"
        class="block relative rounded-2xl overflow-hidden aspect-[4/5] bg-canvas mb-3.5 group-hover:opacity-95 transition cursor-pointer"
-       title="Lihat detail & galeri slide Luniva - Frame Kacamata Republik 8807 - Republik Collection (Kacamata Persegi)">
+       title="Lihat detail & beli di Shopee: Luniva - Frame Kacamata Republik 8807 - Republik Collection (Kacamata Persegi)">
       
       <img src="/optikmario.my.id/public/images/products/luniva-frame-kacamata-republik-8807-republik-collection.jpg" 
            onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
@@ -3646,11 +3777,11 @@
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">
       
-      <!-- Hover Overlay Badge: Buka Detail Galeri -->
+      <!-- Hover Overlay Badge: Buka Detail Shopee -->
       <div class="absolute inset-0 bg-carbon/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
         <span class="bg-carbon/90 text-canvas text-[11px] font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 backdrop-blur-sm transform group-hover:scale-105 transition">
-          <i class="fa-solid fa-images text-[11px] text-neonLime"></i>
-          <span>Lihat Galeri & Detail</span>
+          <i class="fa-solid fa-store text-[11px] text-neonLime"></i>
+          <span>Lihat Produk di Shopee</span>
         </span>
       </div>
 
@@ -3671,7 +3802,7 @@
     <!-- Product Info (Title, Subtitle Specs, Price) -->
     <div class="px-1 mb-2">
       <div class="flex items-center justify-between gap-2 mb-1">
-        <a href="/produk/luniva-frame-kacamata-republik-8807-republik-collection" 
+        <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-8807-Republik-Collection-(Kacamata-Persegi)-i.1511744249.27391693951" target="_blank" rel="noopener"
            class="font-extrabold text-sm sm:text-base text-carbon hover:text-stoneMuted transition line-clamp-1" 
            title="Luniva - Frame Kacamata Republik 8807 - Republik Collection (Kacamata Persegi)">
           Luniva - Frame Kacamata Republik 8807 - Republik Collection (Kacamata Persegi)        </a>
@@ -3686,8 +3817,8 @@
 
   <!-- Action Buttons: Detail, Shopee, and WhatsApp -->
   <div class="pt-2.5 border-t border-borderSubtle/60 flex items-center gap-1.5">
-    <!-- Detail Page Link -->
-    <a href="/produk/luniva-frame-kacamata-republik-8807-republik-collection" 
+    <!-- Detail Page Link to Shopee -->
+    <a href="https://shopee.co.id/Luniva-Frame-Kacamata-Republik-8807-Republik-Collection-(Kacamata-Persegi)-i.1511744249.27391693951" target="_blank" rel="noopener"
        class="flex-1 text-center py-2 px-1.5 rounded-full bg-canvas hover:bg-white text-carbon font-bold text-[11px] transition border border-borderSubtle flex items-center justify-center gap-1 shadow-xs">
       <i class="fa-solid fa-eye text-[10px] text-stoneMuted"></i>
       <span>Detail</span>
@@ -3738,6 +3869,92 @@
     </div>
 
   </div>
+
+  <script>
+    // Instant client-side search & category filtering for static GitHub Pages hosting
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.querySelector('input[name="search"]');
+      const categoryLinks = document.querySelectorAll('.category-pill');
+      const productItems = document.querySelectorAll('.product-item');
+      const countDisplay = document.getElementById('product-count-display');
+      const searchForm = document.querySelector('form[action*="produk"]');
+
+      if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          applyFilter();
+        });
+      }
+
+      function getActiveCat() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('kategori') || 'semua';
+      }
+
+      function applyFilter() {
+        const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+        const activeCat = getActiveCat();
+
+        let visibleCount = 0;
+        productItems.forEach(item => {
+          const cat = item.getAttribute('data-category') || '';
+          const title = item.getAttribute('data-title') || '';
+          const shape = item.getAttribute('data-shape') || '';
+
+          const matchesCat = (activeCat === 'semua' || cat === activeCat);
+          const matchesQuery = !query || title.includes(query) || shape.includes(query);
+
+          if (matchesCat && matchesQuery) {
+            item.style.display = '';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        if (countDisplay) {
+          countDisplay.textContent = visibleCount;
+        }
+
+        // Update pill active visual state
+        categoryLinks.forEach(link => {
+          const slug = link.getAttribute('data-slug');
+          if (slug === activeCat) {
+            link.className = 'category-pill whitespace-nowrap px-4 py-2 rounded-full text-xs font-black transition border bg-neonLime text-carbon border-neonLime shadow-sm';
+          } else {
+            link.className = 'category-pill whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition border bg-canvas text-carbon hover:bg-white border-borderSubtle';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', applyFilter);
+      }
+
+      // Intercept category pill clicks for instant client filtering without page reload
+      categoryLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const slug = this.getAttribute('data-slug');
+          const newUrl = new URL(window.location.href);
+          if (slug === 'semua') {
+            newUrl.searchParams.delete('kategori');
+          } else {
+            newUrl.searchParams.set('kategori', slug);
+          }
+          window.history.pushState({}, '', newUrl.toString());
+          applyFilter();
+        });
+      });
+
+      // Initial filter on load if query param exists
+      const initialCat = getActiveCat();
+      const initialSearch = (searchInput ? searchInput.value : '').trim();
+      if (initialCat !== 'semua' || initialSearch !== '') {
+        applyFilter();
+      }
+    });
+  </script>
 </section>
   </main>
 
@@ -3750,7 +3967,7 @@
       
       <!-- Brand Column -->
       <div class="md:col-span-4">
-        <a href="/" class="inline-flex items-center gap-2 mb-4">
+        <a href="index.html" class="inline-flex items-center gap-2 mb-4">
           <span class="text-2xl font-black tracking-tight text-white font-sans">
             OPTIK<span class="font-normal text-stone-400">MARIO</span>
           </span>
@@ -3790,12 +4007,12 @@
       <div class="md:col-span-2">
         <h4 class="text-xs font-black uppercase tracking-wider text-white mb-4">Navigasi Utama</h4>
         <ul class="space-y-2 text-xs text-stone-400">
-          <li><a href="/" class="hover:text-neonLime transition">Beranda</a></li>
-          <li><a href="/produk" class="hover:text-neonLime transition">Produk & Katalog</a></li>
-          <li><a href="/layanan" class="hover:text-neonLime transition">Layanan Klinis</a></li>
-          <li><a href="/tentang-kami" class="hover:text-neonLime transition">Tentang Kami</a></li>
-          <li><a href="/lokasi" class="hover:text-neonLime transition">Kontak & Lokasi</a></li>
-          <li><a href="/portal" class="hover:text-neonLime transition">Portal Edukasi</a></li>
+          <li><a href="index.html" class="hover:text-neonLime transition">Beranda</a></li>
+          <li><a href="produk.html" class="hover:text-neonLime transition">Produk & Katalog</a></li>
+          <li><a href="layanan.html" class="hover:text-neonLime transition">Layanan Klinis</a></li>
+          <li><a href="tentang-kami.html" class="hover:text-neonLime transition">Tentang Kami</a></li>
+          <li><a href="lokasi.html" class="hover:text-neonLime transition">Kontak & Lokasi</a></li>
+          <li><a href="portal.html" class="hover:text-neonLime transition">Portal Edukasi</a></li>
         </ul>
       </div>
 
@@ -3803,12 +4020,12 @@
       <div class="md:col-span-2">
         <h4 class="text-xs font-black uppercase tracking-wider text-white mb-4">Katalog Luniva</h4>
         <ul class="space-y-2 text-xs text-stone-400">
-          <li><a href="/produk?kategori=frame-bulat" class="hover:text-neonLime transition">Luniva Arkema (Round)</a></li>
-          <li><a href="/produk?kategori=frame-persegi" class="hover:text-neonLime transition">Luniva Ebony (Square)</a></li>
-          <li><a href="/produk?kategori=frame-retro-bold" class="hover:text-neonLime transition">Luniva Black Cobra (Bold)</a></li>
-          <li><a href="/produk?kategori=frame-cat-eye" class="hover:text-neonLime transition">Luniva Cat-Eye Audrey</a></li>
-          <li><a href="/produk?kategori=sunglasses" class="hover:text-neonLime transition">Sunglasses Polarized</a></li>
-          <li><a href="/produk?kategori=paket-lensa" class="hover:text-neonLime transition">Paket Lensa Optik</a></li>
+          <li><a href="produk.html?kategori=frame-bulat" class="hover:text-neonLime transition">Luniva Arkema (Round)</a></li>
+          <li><a href="produk.html?kategori=frame-persegi" class="hover:text-neonLime transition">Luniva Ebony (Square)</a></li>
+          <li><a href="produk.html?kategori=frame-retro-bold" class="hover:text-neonLime transition">Luniva Black Cobra (Bold)</a></li>
+          <li><a href="produk.html?kategori=frame-cat-eye" class="hover:text-neonLime transition">Luniva Cat-Eye Audrey</a></li>
+          <li><a href="produk.html?kategori=sunglasses" class="hover:text-neonLime transition">Sunglasses Polarized</a></li>
+          <li><a href="produk.html?kategori=paket-lensa" class="hover:text-neonLime transition">Paket Lensa Optik</a></li>
         </ul>
       </div>
 
@@ -3872,7 +4089,7 @@
           <i class="fa-solid fa-store text-neonLime"></i> shopee.co.id/lunivaeyewear
         </a>
         <span class="text-white/20">|</span>
-        <a href="/lokasi" class="hover:text-neonLime transition">Singkawang & Mempawah</a>
+        <a href="lokasi.html" class="hover:text-neonLime transition">Singkawang & Mempawah</a>
       </div>
     </div>
 
@@ -4003,6 +4220,46 @@
       if (indicator) indicator.style.backgroundColor = themeColor;
       if (floatingIndicator) floatingIndicator.style.backgroundColor = themeColor;
     }
+
+    // GITHUB PAGES LINK GUARDIAN & ROUTE RESOLVER
+    (function() {
+      function fixLinks() {
+        const isGH = window.location.hostname.endsWith('github.io');
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        const repoPrefix = (isGH && pathParts.length > 0) ? '/' + pathParts[0] : '';
+        
+        document.querySelectorAll('a[href]').forEach(function(a) {
+          const href = a.getAttribute('href');
+          if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) {
+            return;
+          }
+          
+          // Prevent links from escaping to root github.io domain (e.g. href="/produk" -> href="/optikmario.my.id/produk.html")
+          if (href.startsWith('/') && !href.startsWith('//')) {
+            if (repoPrefix && !href.startsWith(repoPrefix)) {
+              const clean = href.replace(/^\//, '');
+              const parts = clean.split('?');
+              const route = parts[0];
+              const query = parts[1] ? '?' + parts[1] : '';
+              
+              if (!route || route === '') {
+                a.setAttribute('href', repoPrefix + '/index.html' + query);
+              } else if (['produk', 'layanan', 'lokasi', 'tentang-kami', 'portal'].includes(route)) {
+                a.setAttribute('href', repoPrefix + '/' + route + '.html' + query);
+              } else {
+                a.setAttribute('href', repoPrefix + href);
+              }
+            }
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', fixLinks);
+      } else {
+        fixLinks();
+      }
+    })();
 
     function initThemeSwitcher() {
       const savedTheme = localStorage.getItem('optik_theme') || 'warm';
