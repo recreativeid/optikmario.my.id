@@ -472,37 +472,37 @@
                loading="lazy"
                class="absolute inset-0 w-full h-full object-cover group-hover:scale-108 transition-transform duration-700">
           
-          <!-- Dark Gradient Overlays for Readability -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/40 group-hover:from-black/90 transition-colors"></div>
+          <!-- Dark Gradient Overlays: Hidden by default, appears on hover for clean thumbnail view -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
           
-          <!-- Top Reel Badges (Instagram Reel Icon & Duration) -->
-          <div class="relative z-10 p-2.5 flex items-center justify-between text-white text-[10px] font-bold">
-            <span class="flex items-center gap-1 bg-black/50 backdrop-blur-md px-2 py-0.5 rounded-full">
+          <!-- Top Reel Badges (Instagram Reel Icon & Duration): Fades in on hover -->
+          <div class="relative z-10 p-2.5 flex items-center justify-between text-white text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span class="flex items-center gap-1 bg-black/60 backdrop-blur-md px-2 py-0.5 rounded-full">
               <i class="fa-brands fa-instagram text-rose-400"></i>
               <span>Reel</span>
             </span>
-            <span class="bg-black/50 backdrop-blur-md px-1.5 py-0.5 rounded text-[10px] font-mono">
+            <span class="bg-black/60 backdrop-blur-md px-1.5 py-0.5 rounded text-[10px] font-mono">
               <?php echo htmlspecialchars($reel['duration'] ?? '0:45'); ?>
             </span>
           </div>
 
-          <!-- Center Play Button with Subtle Pulse Effect -->
-          <div class="relative z-10 flex items-center justify-center my-auto">
-            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/90 backdrop-blur text-carbon flex items-center justify-center shadow-lg group-hover:scale-115 group-hover:bg-neonLime transition duration-300">
+          <!-- Center Play Button: HIDDEN by default, appears on hover -->
+          <div class="relative z-10 flex items-center justify-center my-auto opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100 pointer-events-none">
+            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 backdrop-blur text-carbon flex items-center justify-center shadow-2xl group-hover:bg-neonLime transition duration-300">
               <i class="fa-solid fa-play text-xs sm:text-sm ml-0.5 text-carbon"></i>
             </div>
           </div>
 
-          <!-- Bottom Content: View Count & Caption Preview -->
-          <div class="relative z-10 p-2.5 sm:p-3 text-white">
-            <div class="flex items-center gap-1.5 text-[10px] text-stone-300 font-semibold mb-1">
+          <!-- Bottom Content: HIDDEN by default, appears on hover -->
+          <div class="relative z-10 p-2.5 sm:p-3 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-3 group-hover:translate-y-0">
+            <div class="flex items-center gap-1.5 text-[10px] text-stone-200 font-semibold mb-1">
               <i class="fa-solid fa-eye text-[9px] text-neonLime"></i>
               <span><?php echo htmlspecialchars($reel['views'] ?? '10K'); ?> views</span>
             </div>
             <div class="text-[11px] font-bold line-clamp-2 leading-snug group-hover:text-neonLime transition">
               <?php echo htmlspecialchars($reel['title']); ?>
             </div>
-            <div class="text-[9px] text-stone-400 mt-1 flex items-center gap-1">
+            <div class="text-[9px] text-stone-300 mt-1 flex items-center gap-1">
               <i class="fa-solid fa-music text-[8px]"></i>
               <span class="truncate">Audio Asli · optik_mario</span>
             </div>

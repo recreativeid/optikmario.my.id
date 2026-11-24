@@ -102,6 +102,34 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+
+    /* ========================================================================= */
+    /* SCROLL-DRIVEN BLUR REVEAL ANIMATION (Smooth Top-to-Bottom Entrance)       */
+    /* ========================================================================= */
+    .scroll-blur-init {
+      opacity: 0;
+      filter: blur(14px);
+      transform: translateY(32px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, filter, transform;
+    }
+
+    .scroll-blur-visible {
+      opacity: 1 !important;
+      filter: blur(0px) !important;
+      transform: translateY(0px) !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-blur-init {
+        opacity: 1 !important;
+        filter: none !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
 <body class="bg-canvas text-carbon flex flex-col min-h-screen">
@@ -537,6 +565,55 @@
         }
       });
     }
+
+    // Scroll-Driven Blur Reveal Animation across all sections and menus
+    document.addEventListener('DOMContentLoaded', () => {
+      const animatedElements = document.querySelectorAll('main > section, main > div, .scroll-blur');
+      
+      if (!('IntersectionObserver' in window)) {
+        animatedElements.forEach(el => el.classList.add('scroll-blur-visible'));
+        return;
+      }
+
+      animatedElements.forEach((el, index) => {
+        const rect = el.getBoundingClientRect();
+        // If element is already in the viewport on initial page load
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('scroll-blur-init');
+          setTimeout(() => el.classList.add('scroll-blur-visible'), 50 * index);
+        } else {
+          el.classList.add('scroll-blur-init');
+        }
+      });
+
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-blur-visible');
+            scrollObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.08
+      });
+
+      animatedElements.forEach(el => scrollObserver.observe(el));
+
+      // Header dynamic glassmorphic blur when scrolling from top to bottom
+      const headerEl = document.querySelector('header');
+      if (headerEl) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 25) {
+            headerEl.classList.add('shadow-md', 'backdrop-blur-xl', 'bg-canvas/95');
+            headerEl.classList.remove('bg-canvas/90');
+          } else {
+            headerEl.classList.remove('shadow-md', 'backdrop-blur-xl', 'bg-canvas/95');
+            headerEl.classList.add('bg-canvas/90');
+          }
+        }, { passive: true });
+      }
+    });
   </script>
 </body>
 </html>
