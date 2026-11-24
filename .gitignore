@@ -1,0 +1,4 @@
+.agents/
+.jarvisignore
+*.log
+shopee_products_merged.json

@@ -1,0 +1,15 @@
+{
+    "name": "optikmario/website",
+    "type": "project",
+    "description": "Website Resmi Optik Mario — Eyewear, Periksa Mata & Layanan Optik Presisi (Singkawang & Mempawah)",
+    "keywords": ["optik", "kacamata", "optik mario", "singkawang", "mempawah", "luniva eyewear", "lensa minus", "periksa mata"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.4|^8.0|^8.1|^8.2|^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

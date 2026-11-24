@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Portal Edukasi & Berita Mata — Optik Mario — Optik Mario</title>
+  <meta name="description" content="Optik Mario: Brand kacamata presisi dan optik modern di Singkawang dan Mempawah. Menampilkan koleksi frame resmi Luniva Eyewear, lensa optometri terstandar, dan layanan refraksi mata terpercaya.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display (The Iconic Trexlens Editorial Pairing) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#F8F6F0',          // Warm Cream / Oatmeal from Dribbble Trexlens
+            surface: '#EFECE3',         // Muted bone surface from shot
+            surfaceLight: '#F4F1E8',    // Soft card background
+            surfaceCard: '#FFFFFF',
+            carbon: '#181917',          // Deep charcoal graphite
+            stoneMuted: '#686B63',      // Editorial olive slate
+            neonLime: '#D4F868',        // Signature glowing lime pill button
+            neonLimeHover: '#c2e850',   // Hover state
+            forestDark: '#243328',      // Deep acetate forest
+            borderSubtle: '#E5E1D6',    // Delicate line divider
+            pinkSoft: '#F6E5E5',        // Soft pink bag icon background
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Exact Trexlens Dribbble Visual Language */
+    body {
+      background-color: #F8F6F0;
+      color: #181917;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background-color: #D4F868;
+      color: #181917;
+    }
+
+    /* The Signature Serif Italic Accent */
+    .font-serif-accent {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    /* Soft Organic Lens Glow */
+    .lens-glow {
+      background: radial-gradient(circle, rgba(212, 248, 104, 0.35) 0%, rgba(212, 248, 104, 0) 70%);
+    }
+
+    /* Glassmorphic Hotspot Tag */
+    .hotspot-tag {
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      box-shadow: 0 6px 24px -2px rgba(24, 25, 23, 0.08);
+    }
+
+    /* Horizontal Reel without Scrollbar */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Subtle image hover zoom */
+    .img-zoom {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .group:hover .img-zoom {
+      transform: scale(1.04);
+    }
+
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-canvas text-carbon flex flex-col min-h-screen">
+
+  <!-- MASTER HEADER -->
+  <!-- TOP UTILITY STRIP -->
+<div class="bg-carbon text-canvas text-xs py-2 px-4 border-b border-carbon/10 hidden sm:block">
+  <div class="max-w-7xl mx-auto flex justify-between items-center text-[11px] tracking-wide font-medium">
+    <div class="flex items-center gap-6">
+      <span class="flex items-center gap-1.5 text-stone-300">
+        <i class="fa-solid fa-location-dot text-neonLime"></i>
+        <span>Cabang Resmi: <strong>Singkawang</strong> (Jl. P. Diponegoro 35) & <strong>Mempawah</strong> (Jl. Daeng Manambon 16)</span>
+      </span>
+    </div>
+    <div class="flex items-center gap-5">
+      <!-- Instagram Link -->
+      <a href="https://www.instagram.com/optik_mario?fqnt=MWF0dnl3OWFvYmpycQ==" target="_blank" rel="noopener" class="text-stone-300 hover:text-neonLime transition flex items-center gap-1.5">
+        <i class="fa-brands fa-instagram text-neonLime text-xs"></i>
+        <span>@optik_mario</span>
+      </a>
+      <span class="text-white/20">|</span>
+      <!-- Shopee Link -->
+      <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" class="text-stone-300 hover:text-neonLime transition flex items-center gap-1.5">
+        <i class="fa-solid fa-bag-shopping text-neonLime text-xs"></i>
+        <span>Shopee: lunivaeyewear</span>
+      </a>
+      <span class="text-white/20">|</span>
+      <a href="mailto:marioopt09@gmail.com" class="text-stone-300 hover:text-white transition flex items-center gap-1">
+        <i class="fa-regular fa-envelope text-neonLime"></i>
+        <span>marioopt09@gmail.com</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN TREXLENS-STYLE NAVBAR (BAHASA INDONESIA MENU) -->
+<header class="sticky top-0 z-40 bg-canvas/90 backdrop-blur-md border-b border-borderSubtle transition-all duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    
+    <!-- BRAND WORDMARK -->
+    <a href="/" class="flex items-center gap-2 group">
+      <span class="text-2xl font-black tracking-tight text-carbon font-sans">
+        OPTIK<span class="font-normal text-stoneMuted">MARIO</span>
+      </span>
+      <span class="w-2 h-2 rounded-full bg-neonLime inline-block animate-pulse"></span>
+    </a>
+
+    <!-- CENTER NAVIGATION LINKS (BAHASA INDONESIA: BERANDA, PRODUK, LAYANAN KLINIS, TENTANG KAMI, KONTAK) -->
+    <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-carbon/80">
+      <a href="/" class="hover:text-carbon transition ">
+        Beranda
+      </a>
+      <a href="/produk" class="hover:text-carbon transition ">
+        Produk
+      </a>
+      <a href="/layanan" class="hover:text-carbon transition ">
+        Layanan Klinis
+      </a>
+      <a href="/tentang-kami" class="hover:text-carbon transition ">
+        Tentang Kami
+      </a>
+      <a href="/lokasi" class="hover:text-carbon transition ">
+        Kontak
+      </a>
+    </nav>
+
+    <!-- RIGHT ACTION: SHOPEE BAG BUTTON & SIGNATURE NEON LIME PILL BUTTON -->
+    <div class="flex items-center gap-3">
+      <!-- Soft Pill Shopping Bag Button (Shopee Luniva Eyewear) -->
+      <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" 
+         class="h-10 px-3.5 rounded-full bg-pink-100/70 hover:bg-pink-100 text-carbon flex items-center gap-1.5 text-xs font-bold border border-pink-200/60 transition shadow-sm"
+         title="Buka Toko Shopee Luniva Eyewear">
+        <i class="fa-solid fa-bag-shopping text-sm text-carbon/80"></i>
+        <span>(0)</span>
+      </a>
+
+      <!-- Primary Neon Lime Pill Button: [ 👓 Belanja Sekarang ] -->
+      <a href="/produk" 
+         class="inline-flex items-center gap-2 bg-neonLime hover:bg-neonLimeHover text-carbon text-xs font-black uppercase tracking-wider px-5 py-2.5 rounded-full shadow-sm hover:shadow transition transform hover:-translate-y-0.5">
+        <i class="fa-solid fa-glasses text-sm"></i>
+        <span>Belanja Sekarang</span>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button type="button" id="mobile-menu-toggle" aria-label="Buka Menu" 
+              class="md:hidden w-10 h-10 rounded-full border border-borderSubtle bg-white flex items-center justify-center text-carbon hover:bg-surface transition">
+        <i class="fa-solid fa-bars text-sm" id="hamburger-icon"></i>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- MOBILE NAVIGATION DRAWER (BAHASA INDONESIA) -->
+  <div id="mobile-drawer" class="hidden md:hidden bg-canvas border-b border-borderSubtle px-4 pt-4 pb-6">
+    <div class="flex flex-col space-y-3 text-xs font-bold uppercase tracking-wider text-carbon">
+      <a href="/" class="py-2.5 px-4 rounded-xl bg-surface transition">Beranda</a>
+      <a href="/produk" class="py-2.5 px-4 rounded-xl bg-surface transition">Produk (Luniva Eyewear)</a>
+      <a href="/layanan" class="py-2.5 px-4 rounded-xl bg-surface transition">Layanan Klinis & Optometri</a>
+      <a href="/tentang-kami" class="py-2.5 px-4 rounded-xl bg-surface transition">Tentang Kami</a>
+      <a href="/lokasi" class="py-2.5 px-4 rounded-xl bg-surface transition">Kontak & Lokasi Cabang</a>
+      
+      <div class="pt-3 border-t border-borderSubtle flex flex-col gap-2">
+        <a href="https://www.instagram.com/optik_mario?fqnt=MWF0dnl3OWFvYmpycQ==" target="_blank" rel="noopener" class="w-full text-center py-2.5 rounded-full bg-canvas border border-borderSubtle text-carbon font-bold text-xs">
+          <i class="fa-brands fa-instagram text-rose-600 mr-1.5"></i> Instagram @optik_mario
+        </a>
+        <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" class="w-full text-center py-2.5 rounded-full bg-pink-100 text-carbon font-bold text-xs">
+          <i class="fa-solid fa-store text-orange-600 mr-1.5"></i> Shopee: lunivaeyewear
+        </a>
+        <a href="https://wa.me/62895708675050" target="_blank" rel="noopener" class="w-full text-center py-2.5 rounded-full bg-neonLime text-carbon font-black text-xs">
+          <i class="fa-brands fa-whatsapp text-sm mr-1.5"></i> WA Mempawah (0895 708675050)
+        </a>
+        <a href="https://wa.me/62895320119379" target="_blank" rel="noopener" class="w-full text-center py-2.5 rounded-full bg-carbon text-canvas font-bold text-xs">
+          <i class="fa-brands fa-whatsapp text-sm text-neonLime mr-1.5"></i> WA Singkawang (0895 3201 19379)
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- MAIN PAGE CONTENT INJECTION -->
+  <main class="flex-grow pb-16 sm:pb-0">
+    <section class="py-8 sm:py-14 bg-canvas">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- HEADER -->
+    <div class="max-w-3xl mb-12">
+      <div class="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.18em] uppercase text-forest bg-forest-soft px-3 py-1.5 rounded mb-3">
+        Edukasi & Wawasan Optik
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-charcoal tracking-tight mb-4">
+        Portal Informasi & Kesehatan Mata
+      </h1>
+      <p class="text-xs sm:text-base text-slate-muted leading-relaxed">
+        Kumpulan panduan praktis dari tim Optik Mario mengenai cara memilih kacamata yang pas, mengenal ragam teknologi lensa, hingga kebiasaan sehari-hari untuk menjaga kesehatan mata Anda.
+      </p>
+    </div>
+
+    <!-- ARTICLES GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              <article class="bg-white rounded-2xl border border-border-subtle overflow-hidden flex flex-col justify-between hover:border-forest/50 transition duration-200">
+          <div>
+            <div class="aspect-[16/10] bg-canvas overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=800&auto=format&fit=crop" alt="Harga Murah Menggiurkan, Tapi Kenapa Kesehatan Mata Tak Boleh Dikorbankan?" class="w-full h-full object-cover img-zoom">
+            </div>
+            
+            <div class="p-5">
+              <div class="flex items-center justify-between text-[10px] font-bold text-forest uppercase tracking-wider mb-2">
+                <span>Edukasi Penglihatan</span>
+                <span class="text-slate-muted font-normal">4 menit baca</span>
+              </div>
+
+              <h2 class="text-sm sm:text-base font-bold text-charcoal leading-snug mb-3 hover:text-forest transition">
+                <a href="/portal/bahaya-beli-kacamata-murah-tanpa-standar">
+                  Harga Murah Menggiurkan, Tapi Kenapa Kesehatan Mata Tak Boleh Dikorbankan?                </a>
+              </h2>
+
+              <p class="text-xs text-slate-muted line-clamp-3 leading-relaxed">
+                Banyak kacamata murah beredar di pasaran tanpa titik fokus optis terkalibrasi dan lapisan UV abal-abal. Pelajari dampaknya terhadap saraf mata Anda.              </p>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0 border-t border-border-subtle/50 mt-4 flex items-center justify-between">
+            <span class="text-[11px] text-slate-muted">20 November 2026</span>
+            <a href="/portal/bahaya-beli-kacamata-murah-tanpa-standar" class="text-xs font-bold text-forest hover:underline">
+              Baca Artikel →
+            </a>
+          </div>
+        </article>
+              <article class="bg-white rounded-2xl border border-border-subtle overflow-hidden flex flex-col justify-between hover:border-forest/50 transition duration-200">
+          <div>
+            <div class="aspect-[16/10] bg-canvas overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1508296695146-257a814070b4?q=80&w=800&auto=format&fit=crop" alt="Panduan Memilih Frame Kacamata Berdasarkan Bentuk Wajah Anda" class="w-full h-full object-cover img-zoom">
+            </div>
+            
+            <div class="p-5">
+              <div class="flex items-center justify-between text-[10px] font-bold text-forest uppercase tracking-wider mb-2">
+                <span>Gaya & Kenyamanan</span>
+                <span class="text-slate-muted font-normal">5 menit baca</span>
+              </div>
+
+              <h2 class="text-sm sm:text-base font-bold text-charcoal leading-snug mb-3 hover:text-forest transition">
+                <a href="/portal/panduan-memilih-frame-sesuai-bentuk-wajah">
+                  Panduan Memilih Frame Kacamata Berdasarkan Bentuk Wajah Anda                </a>
+              </h2>
+
+              <p class="text-xs text-slate-muted line-clamp-3 leading-relaxed">
+                Apakah wajah Anda bulat, kotak, oval, atau hati? Simak tips praktis agar kacamata menyempurnakan proporsi alami wajah Anda.              </p>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0 border-t border-border-subtle/50 mt-4 flex items-center justify-between">
+            <span class="text-[11px] text-slate-muted">15 November 2026</span>
+            <a href="/portal/panduan-memilih-frame-sesuai-bentuk-wajah" class="text-xs font-bold text-forest hover:underline">
+              Baca Artikel →
+            </a>
+          </div>
+        </article>
+              <article class="bg-white rounded-2xl border border-border-subtle overflow-hidden flex flex-col justify-between hover:border-forest/50 transition duration-200">
+          <div>
+            <div class="aspect-[16/10] bg-canvas overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800&auto=format&fit=crop" alt="Mengenal Perbedaan Lensa: Anti Radiasi, Blue-Ray, dan Photochromic" class="w-full h-full object-cover img-zoom">
+            </div>
+            
+            <div class="p-5">
+              <div class="flex items-center justify-between text-[10px] font-bold text-forest uppercase tracking-wider mb-2">
+                <span>Teknologi Lensa</span>
+                <span class="text-slate-muted font-normal">6 menit baca</span>
+              </div>
+
+              <h2 class="text-sm sm:text-base font-bold text-charcoal leading-snug mb-3 hover:text-forest transition">
+                <a href="/portal/perbedaan-lensa-anti-radiasi-blueray-photochromic">
+                  Mengenal Perbedaan Lensa: Anti Radiasi, Blue-Ray, dan Photochromic                </a>
+              </h2>
+
+              <p class="text-xs text-slate-muted line-clamp-3 leading-relaxed">
+                Sering bingung saat ditawari opsi lensa di optik? Pahami fungsi masing-masing agar sesuai dengan kebutuhan dan kantong Anda.              </p>
+            </div>
+          </div>
+
+          <div class="p-5 pt-0 border-t border-border-subtle/50 mt-4 flex items-center justify-between">
+            <span class="text-[11px] text-slate-muted">10 November 2026</span>
+            <a href="/portal/perbedaan-lensa-anti-radiasi-blueray-photochromic" class="text-xs font-bold text-forest hover:underline">
+              Baca Artikel →
+            </a>
+          </div>
+        </article>
+          </div>
+
+  </div>
+</section>
+  </main>
+
+  <!-- MASTER FOOTER -->
+  <footer class="bg-carbon text-canvas pt-16 pb-12 border-t border-borderSubtle">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- TOP ROW: BRAND & PHILOSOPHY -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-14 border-b border-white/10">
+      
+      <!-- Brand Column -->
+      <div class="md:col-span-4">
+        <a href="/" class="inline-flex items-center gap-2 mb-4">
+          <span class="text-2xl font-black tracking-tight text-white font-sans">
+            OPTIK<span class="font-normal text-stone-400">MARIO</span>
+          </span>
+          <span class="w-2 h-2 rounded-full bg-neonLime inline-block"></span>
+        </a>
+        
+        <p class="text-xs text-stone-400 leading-relaxed mb-4">
+          Penyedia kacamata modern, frame berkualitas Luniva Eyewear, dan layanan pemeriksaan refraksi klinis terpercaya di Singkawang dan Mempawah.
+        </p>
+
+        <!-- Brand Truth Callout -->
+        <div class="bg-white/5 border border-white/10 p-4 rounded-2xl mb-6">
+          <div class="text-[10px] font-black text-neonLime uppercase tracking-wider mb-1">Prinsip Kesehatan Mata</div>
+          <p class="text-xs text-stone-300 italic leading-relaxed">
+            "Harga murah bisa menggiurkan, tapi kesehatan mata tak boleh dikorbankan. Konsultasikan resep mata Anda di Optik Mario – Pilih Lensa Yang Aman Untuk Penglihatan."
+          </p>
+        </div>
+
+        <!-- Social Media Badges -->
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/optik_mario?fqnt=MWF0dnl3OWFvYmpycQ==" target="_blank" rel="noopener" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 hover:bg-neonLime hover:text-carbon flex items-center justify-center text-white transition" title="Instagram @optik_mario">
+            <i class="fa-brands fa-instagram text-sm"></i>
+          </a>
+          <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" aria-label="Shopee Store" class="w-9 h-9 rounded-full bg-white/10 hover:bg-neonLime hover:text-carbon flex items-center justify-center text-white transition" title="Shopee: lunivaeyewear">
+            <i class="fa-solid fa-bag-shopping text-sm"></i>
+          </a>
+          <a href="https://wa.me/62895708675050" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-white/10 hover:bg-neonLime hover:text-carbon flex items-center justify-center text-white transition" title="WhatsApp Konsultasi">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+          </a>
+          <a href="mailto:marioopt09@gmail.com" aria-label="Email" class="w-9 h-9 rounded-full bg-white/10 hover:bg-neonLime hover:text-carbon flex items-center justify-center text-white transition" title="Email Resmi">
+            <i class="fa-regular fa-envelope text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Indonesian Navigation -->
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-black uppercase tracking-wider text-white mb-4">Navigasi Utama</h4>
+        <ul class="space-y-2 text-xs text-stone-400">
+          <li><a href="/" class="hover:text-neonLime transition">Beranda</a></li>
+          <li><a href="/produk" class="hover:text-neonLime transition">Produk & Katalog</a></li>
+          <li><a href="/layanan" class="hover:text-neonLime transition">Layanan Klinis</a></li>
+          <li><a href="/tentang-kami" class="hover:text-neonLime transition">Tentang Kami</a></li>
+          <li><a href="/lokasi" class="hover:text-neonLime transition">Kontak & Lokasi</a></li>
+          <li><a href="/portal" class="hover:text-neonLime transition">Portal Edukasi</a></li>
+        </ul>
+      </div>
+
+      <!-- Katalog Luniva Eyewear -->
+      <div class="md:col-span-2">
+        <h4 class="text-xs font-black uppercase tracking-wider text-white mb-4">Katalog Luniva</h4>
+        <ul class="space-y-2 text-xs text-stone-400">
+          <li><a href="/produk?kategori=frame-bulat" class="hover:text-neonLime transition">Luniva Arkema (Round)</a></li>
+          <li><a href="/produk?kategori=frame-persegi" class="hover:text-neonLime transition">Luniva Ebony (Square)</a></li>
+          <li><a href="/produk?kategori=frame-retro-bold" class="hover:text-neonLime transition">Luniva Black Cobra (Bold)</a></li>
+          <li><a href="/produk?kategori=frame-cat-eye" class="hover:text-neonLime transition">Luniva Cat-Eye Audrey</a></li>
+          <li><a href="/produk?kategori=sunglasses" class="hover:text-neonLime transition">Sunglasses Polarized</a></li>
+          <li><a href="/produk?kategori=paket-lensa" class="hover:text-neonLime transition">Paket Lensa Optik</a></li>
+        </ul>
+      </div>
+
+      <!-- Dua Cabang Fisik Resmi -->
+      <div class="md:col-span-4">
+        <h4 class="text-xs font-black uppercase tracking-wider text-white mb-4">Dua Cabang Resmi</h4>
+        
+        <div class="space-y-3.5 text-xs">
+          <!-- Singkawang -->
+          <div class="bg-white/5 p-3.5 rounded-2xl border border-white/10">
+            <div class="font-bold text-white flex items-center justify-between mb-1">
+              <span>Optik Mario Singkawang</span>
+              <span class="text-[10px] text-neonLime font-mono">Cabang 01</span>
+            </div>
+            <p class="text-stone-400 mb-2 leading-relaxed">Jl. P. Diponegoro 35, Singkawang</p>
+            <div class="flex items-center gap-3">
+              <a href="https://wa.me/62895320119379" target="_blank" rel="noopener" class="text-[11px] font-bold text-neonLime hover:underline flex items-center gap-1">
+                <i class="fa-brands fa-whatsapp"></i> 0895 3201 19379
+              </a>
+              <span class="text-white/20">•</span>
+              <a href="https://maps.google.com/?q=Optik+Mario+Jl+P+Diponegoro+35+Singkawang" target="_blank" rel="noopener" class="text-[11px] text-stone-400 hover:text-white flex items-center gap-1">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Petunjuk Arah
+              </a>
+            </div>
+          </div>
+
+          <!-- Mempawah -->
+          <div class="bg-white/5 p-3.5 rounded-2xl border border-white/10">
+            <div class="font-bold text-white flex items-center justify-between mb-1">
+              <span>Optik Mario Mempawah</span>
+              <span class="text-[10px] text-neonLime font-mono">Cabang 02</span>
+            </div>
+            <p class="text-stone-400 mb-2 leading-relaxed">Jl. Daeng Manambon 16, Mempawah</p>
+            <div class="flex items-center gap-3">
+              <a href="https://wa.me/62895708675050" target="_blank" rel="noopener" class="text-[11px] font-bold text-neonLime hover:underline flex items-center gap-1">
+                <i class="fa-brands fa-whatsapp"></i> 0895 7086 75050
+              </a>
+              <span class="text-white/20">•</span>
+              <a href="https://maps.google.com/?q=Optik+Mario+Jl+Daeng+Manambon+16+Mempawah" target="_blank" rel="noopener" class="text-[11px] text-stone-400 hover:text-white flex items-center gap-1">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Petunjuk Arah
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM ROW: COPYRIGHT & DIRECT CHANNELS -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-4">
+      <div>
+        © 2026 Optik Mario. Semua hak cipta dilindungi. Lebih Jelas Melihat, Lebih Percaya Diri.
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="https://www.instagram.com/optik_mario?fqnt=MWF0dnl3OWFvYmpycQ==" target="_blank" rel="noopener" class="hover:text-neonLime transition flex items-center gap-1">
+          <i class="fa-brands fa-instagram text-neonLime"></i> Instagram @optik_mario
+        </a>
+        <span class="text-white/20">|</span>
+        <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" class="hover:text-neonLime transition flex items-center gap-1">
+          <i class="fa-solid fa-store text-neonLime"></i> shopee.co.id/lunivaeyewear
+        </a>
+        <span class="text-white/20">|</span>
+        <a href="/lokasi" class="hover:text-neonLime transition">Singkawang & Mempawah</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <!-- STICKY WHATSAPP ON MOBILE -->
+  <!-- STICKY BOTTOM WHATSAPP BAR ON MOBILE (TREXLENS PILL STYLE) -->
+<div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-canvas/95 backdrop-blur-md border-t border-borderSubtle p-3 shadow-2xl">
+  <div class="flex items-center gap-2 max-w-sm mx-auto">
+    <!-- WA Mempawah (Neon Lime Pill) -->
+    <a href="https://wa.me/62895708675050?text=Halo%20Optik%20Mario%20Mempawah,%20saya%20ingin%20konsultasi%20kacamata%20dan%20resep%20mata" 
+       target="_blank" rel="noopener"
+       class="flex-1 bg-neonLime hover:bg-neonLimeHover text-carbon text-xs font-black py-3 px-3 rounded-full flex items-center justify-center gap-1.5 shadow-md uppercase tracking-wider">
+      <i class="fa-brands fa-whatsapp text-sm"></i>
+      <span>WA Mempawah</span>
+    </a>
+    
+    <!-- WA Singkawang (Carbon Pill) -->
+    <a href="https://wa.me/62895320119379?text=Halo%20Optik%20Mario%20Singkawang,%20saya%20ingin%20konsultasi%20kacamata%20dan%20resep%20mata" 
+       target="_blank" rel="noopener"
+       class="flex-1 bg-carbon hover:bg-black text-canvas text-xs font-bold py-3 px-3 rounded-full flex items-center justify-center gap-1.5 shadow-md uppercase tracking-wider">
+      <i class="fa-brands fa-whatsapp text-sm text-neonLime"></i>
+      <span>WA Singkawang</span>
+    </a>
+  </div>
+</div>
+
+  <!-- JAVASCRIPT LOGIC FOR NAVIGATION & INTERACTIONS -->
+  <script>
+    // Mobile Drawer Toggle
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const icon = document.getElementById('hamburger-icon');
+
+    if (toggleBtn && drawer) {
+      toggleBtn.addEventListener('click', () => {
+        drawer.classList.toggle('hidden');
+        if (drawer.classList.contains('hidden')) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        } else {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
