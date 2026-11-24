@@ -160,29 +160,82 @@
 <section id="koleksi" class="py-24 bg-canvas">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
-    <div class="text-center max-w-3xl mx-auto mb-16">
+    <div class="text-center max-w-3xl mx-auto mb-14">
       <span class="text-[11px] font-black uppercase tracking-[0.2em] text-stoneMuted mb-2 block">✦ KOLEKSI RESMI LUNIVA EYEWEAR</span>
       <h2 class="text-3xl sm:text-5xl font-black text-carbon tracking-tight mb-3">
         Koleksi frame untuk setiap <em class="font-serif-accent font-normal italic">cara Anda</em> memandang dunia.
       </h2>
       <p class="text-stoneMuted text-xs sm:text-sm">
-        Dapat dipesan langsung melalui toko Shopee resmi kami atau via WhatsApp untuk pemasangan lensa resep dokter.
+        Pilihan siluet kacamata original Luniva Eyewear yang siap dipasangi lensa optometri terstandar di Optik Mario.
       </p>
     </div>
 
-    <!-- Product Grid of 3 Cards with Direct Shopee Links -->
+    <!-- Clean Product Showcase: Foto Produk Tanpa Tulisan, Tanpa Harga & Tombol (Katalog Lengkap ada di Menu Produk) -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <?php 
-        $displayFeatured = array_slice($featuredProducts, 0, 3);
-        foreach ($displayFeatured as $product): 
-      ?>
-        <?php include __DIR__ . '/../components/product-card.blade.php'; ?>
-      <?php endforeach; ?>
+      
+      <!-- Card 1: Bold Acetate -->
+      <a href="<?php echo route_url('/produk'); ?>" 
+         class="group bg-surface rounded-3xl p-5 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between block"
+         title="Lihat koleksi Bold Acetate di Menu Produk">
+        <div>
+          <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-canvas mb-5 border border-borderSubtle/60 relative">
+            <img src="<?php echo route_url('/public/images/products/square_black_bold.jpg'); ?>" 
+                 alt="Luniva Bold Acetate Series" 
+                 loading="lazy"
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <span class="text-[10px] font-black uppercase tracking-wider text-stoneMuted block mb-1">Square Silhouette</span>
+          <h3 class="text-xl font-black text-carbon group-hover:text-stoneMuted transition mb-2">Luniva Bold Acetate</h3>
+          <p class="text-xs text-stoneMuted leading-relaxed">
+            Siluet persegi tegas dari material asetat solid untuk impresi percaya diri dan berkarakter.
+          </p>
+        </div>
+      </a>
+
+      <!-- Card 2: Crystal Clear -->
+      <a href="<?php echo route_url('/produk'); ?>" 
+         class="group bg-surface rounded-3xl p-5 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between block"
+         title="Lihat koleksi Crystal Clear di Menu Produk">
+        <div>
+          <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-canvas mb-5 border border-borderSubtle/60 relative">
+            <img src="<?php echo route_url('/public/images/products/crystal_clear_minimal.jpg'); ?>" 
+                 alt="Luniva Crystal Clear Series" 
+                 loading="lazy"
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <span class="text-[10px] font-black uppercase tracking-wider text-stoneMuted block mb-1">Clear Crystal Series</span>
+          <h3 class="text-xl font-black text-carbon group-hover:text-stoneMuted transition mb-2">Luniva Crystal Clear</h3>
+          <p class="text-xs text-stoneMuted leading-relaxed">
+            Tren bingkai transparan modern yang ringan, bersih, dan harmonis untuk segala bentuk wajah.
+          </p>
+        </div>
+      </a>
+
+      <!-- Card 3: Classic Wire -->
+      <a href="<?php echo route_url('/produk'); ?>" 
+         class="group bg-surface rounded-3xl p-5 border border-borderSubtle hover:shadow-xl transition-all duration-300 flex flex-col justify-between block"
+         title="Lihat koleksi Classic Wire di Menu Produk">
+        <div>
+          <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-canvas mb-5 border border-borderSubtle/60 relative">
+            <img src="<?php echo route_url('/public/images/products/round_gold_metal.jpg'); ?>" 
+                 alt="Luniva Classic Wire Series" 
+                 loading="lazy"
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <span class="text-[10px] font-black uppercase tracking-wider text-stoneMuted block mb-1">Wire & Round Collection</span>
+          <h3 class="text-xl font-black text-carbon group-hover:text-stoneMuted transition mb-2">Luniva Classic Wire</h3>
+          <p class="text-xs text-stoneMuted leading-relaxed">
+            Kesan intelektual anggun dengan bobot ultra-ringan dan bantalan hidung silikon empuk anti-pegal.
+          </p>
+        </div>
+      </a>
+
     </div>
 
+    <!-- CTA Buka Katalog Produk -->
     <div class="text-center mt-12">
       <a href="<?php echo route_url('/produk'); ?>" class="inline-flex items-center gap-2 bg-neonLime hover:bg-neonLimeHover text-carbon font-black text-xs uppercase tracking-wider px-8 py-3.5 rounded-full shadow-sm transition">
-        <span>Buka Katalog Lengkap Shopee Luniva</span>
+        <span>Buka Katalog Lengkap di Menu Produk</span>
         <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>
@@ -577,7 +630,7 @@
         <div>
           <!-- Real Store Photo Mempawah -->
           <div class="rounded-2xl overflow-hidden aspect-[16/9] bg-canvas mb-6 border border-borderSubtle">
-            <img src="/optikmario.my.id/public/images/locations/optik_mario_mempawah.jpg" 
+            <img src="<?php echo route_url('/public/images/locations/optik_mario_mempawah.jpg'); ?>" 
                  alt="Optik Mario Mempawah" class="w-full h-full object-cover">
           </div>
 
@@ -612,7 +665,7 @@
         <div>
           <!-- Real Store Photo Singkawang -->
           <div class="rounded-2xl overflow-hidden aspect-[16/9] bg-canvas mb-6 border border-borderSubtle">
-            <img src="/optikmario.my.id/public/images/locations/optik_mario_singkawang.jpg" 
+            <img src="<?php echo route_url('/public/images/locations/optik_mario_singkawang.jpg'); ?>" 
                  alt="Optik Mario Singkawang" class="w-full h-full object-cover">
           </div>
 
