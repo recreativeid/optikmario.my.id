@@ -7,6 +7,7 @@
        title="Lihat detail & galeri slide <?php echo htmlspecialchars($product['name']); ?>">
       
       <img src="<?php echo htmlspecialchars($product['image']); ?>" 
+           onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='/optikmario.my.id'+this.getAttribute('src');"
            alt="<?php echo htmlspecialchars($product['name']); ?>" 
            loading="lazy"
            class="w-full h-full object-cover object-center img-zoom">

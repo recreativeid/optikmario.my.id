@@ -179,7 +179,8 @@
          title="Lihat koleksi Bold Acetate di Menu Produk">
         <div>
           <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-canvas mb-5 border border-borderSubtle/60 relative">
-            <img src="<?php echo route_url('/public/images/products/square_black_bold.jpg'); ?>" 
+            <img src="/optikmario.my.id/public/images/products/square_black_bold.jpg" 
+                 onerror="this.onerror=null; this.src='public/images/products/square_black_bold.jpg';"
                  alt="Luniva Bold Acetate Series" 
                  loading="lazy"
                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
@@ -198,7 +199,8 @@
          title="Lihat koleksi Crystal Clear di Menu Produk">
         <div>
           <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-canvas mb-5 border border-borderSubtle/60 relative">
-            <img src="<?php echo route_url('/public/images/products/crystal_clear_minimal.jpg'); ?>" 
+            <img src="/optikmario.my.id/public/images/products/crystal_clear_minimal.jpg" 
+                 onerror="this.onerror=null; this.src='public/images/products/crystal_clear_minimal.jpg';"
                  alt="Luniva Crystal Clear Series" 
                  loading="lazy"
                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
@@ -217,7 +219,8 @@
          title="Lihat koleksi Classic Wire di Menu Produk">
         <div>
           <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-canvas mb-5 border border-borderSubtle/60 relative">
-            <img src="<?php echo route_url('/public/images/products/round_gold_metal.jpg'); ?>" 
+            <img src="/optikmario.my.id/public/images/products/round_gold_metal.jpg" 
+                 onerror="this.onerror=null; this.src='public/images/products/round_gold_metal.jpg';"
                  alt="Luniva Classic Wire Series" 
                  loading="lazy"
                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
@@ -630,7 +633,8 @@
         <div>
           <!-- Real Store Photo Mempawah -->
           <div class="rounded-2xl overflow-hidden aspect-[16/9] bg-canvas mb-6 border border-borderSubtle">
-            <img src="<?php echo route_url('/public/images/locations/optik_mario_mempawah.jpg'); ?>" 
+            <img src="/optikmario.my.id/public/images/locations/optik_mario_mempawah.jpg" 
+                 onerror="this.onerror=null; this.src='public/images/locations/optik_mario_mempawah.jpg';"
                  alt="Optik Mario Mempawah" class="w-full h-full object-cover">
           </div>
 
@@ -665,7 +669,8 @@
         <div>
           <!-- Real Store Photo Singkawang -->
           <div class="rounded-2xl overflow-hidden aspect-[16/9] bg-canvas mb-6 border border-borderSubtle">
-            <img src="<?php echo route_url('/public/images/locations/optik_mario_singkawang.jpg'); ?>" 
+            <img src="/optikmario.my.id/public/images/locations/optik_mario_singkawang.jpg" 
+                 onerror="this.onerror=null; this.src='public/images/locations/optik_mario_singkawang.jpg';"
                  alt="Optik Mario Singkawang" class="w-full h-full object-cover">
           </div>
 
