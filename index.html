@@ -17,22 +17,30 @@
   <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <!-- Instant Theme Initializer (prevents flash of default theme) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('optik_theme') || 'warm';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            canvas: '#F8F6F0',          // Warm Cream / Oatmeal from Dribbble Trexlens
-            surface: '#EFECE3',         // Muted bone surface from shot
-            surfaceLight: '#F4F1E8',    // Soft card background
-            surfaceCard: '#FFFFFF',
-            carbon: '#181917',          // Deep charcoal graphite
-            stoneMuted: '#686B63',      // Editorial olive slate
-            neonLime: '#D4F868',        // Signature glowing lime pill button
-            neonLimeHover: '#c2e850',   // Hover state
-            forestDark: '#243328',      // Deep acetate forest
-            borderSubtle: '#E5E1D6',    // Delicate line divider
-            pinkSoft: '#F6E5E5',        // Soft pink bag icon background
+            canvas: 'rgb(var(--color-canvas) / <alpha-value>)',
+            surface: 'rgb(var(--color-surface) / <alpha-value>)',
+            surfaceLight: 'rgb(var(--color-surface-light) / <alpha-value>)',
+            surfaceCard: 'rgb(var(--color-surface-card) / <alpha-value>)',
+            carbon: 'rgb(var(--color-carbon) / <alpha-value>)',
+            stoneMuted: 'rgb(var(--color-stone-muted) / <alpha-value>)',
+            neonLime: 'rgb(var(--color-neon-lime) / <alpha-value>)',
+            neonLimeHover: 'rgb(var(--color-neon-lime-hover) / <alpha-value>)',
+            forestDark: 'rgb(var(--color-forest-dark) / <alpha-value>)',
+            borderSubtle: 'rgb(var(--color-border-subtle) / <alpha-value>)',
+            pinkSoft: 'rgb(var(--color-pink-soft) / <alpha-value>)',
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
@@ -44,18 +52,69 @@
   </script>
 
   <style>
+    /* ========================================================================= */
+    /* DUAL THEME COLOR TOKENS: WARM CREAM (DEFAULT) VS ZEST FRESH GREEN         */
+    /* ========================================================================= */
+    :root, html[data-theme="warm"] {
+      --color-canvas: 248 246 240;        /* #F8F6F0 Warm Cream */
+      --color-surface: 239 236 227;       /* #EFECE3 Muted Bone */
+      --color-surface-light: 244 241 232; /* #F4F1E8 Soft Card */
+      --color-surface-card: 255 255 255;  /* #FFFFFF Pure White */
+      --color-carbon: 24 25 23;           /* #181917 Deep Charcoal */
+      --color-stone-muted: 104 107 99;    /* #686B63 Olive Slate */
+      --color-neon-lime: 212 248 104;     /* #D4F868 Neon Lime */
+      --color-neon-lime-hover: 194 232 80;/* #C2E850 */
+      --color-forest-dark: 36 51 40;      /* #243328 Forest Acetate */
+      --color-border-subtle: 229 225 214; /* #E5E1D6 Border Divider */
+      --color-pink-soft: 246 229 229;     /* #F6E5E5 Soft Pill Bag */
+    }
+
+    html[data-theme="fresh-green"] {
+      --color-canvas: 242 248 234;        /* #F2F8EA Fresh Pale Crisp Green */
+      --color-surface: 227 240 211;       /* #E3F0D3 Fresh Leaf Surface */
+      --color-surface-light: 237 246 226; /* #EDF6E2 Crisp Tint Card */
+      --color-surface-card: 255 255 255;  /* #FFFFFF Clean Pure White */
+      --color-carbon: 22 40 11;           /* #16280B Deep Organic Green Dark */
+      --color-stone-muted: 81 113 53;     /* #517135 Natural Foliage Muted */
+      --color-neon-lime: 123 173 50;      /* #7BAD32 Signature Zest Fresh Green Tone */
+      --color-neon-lime-hover: 109 158 42;/* #6D9E2A Deep Green Hover */
+      --color-forest-dark: 25 49 12;      /* #19310C Dark Evergreen */
+      --color-border-subtle: 210 231 189; /* #D2E7BD Spring Green Border */
+      --color-pink-soft: 224 242 203;     /* #E0F2CB Fresh Lime Pill Bag */
+    }
+
+    html {
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
     /* Exact Trexlens Dribbble Visual Language */
     body {
-      background-color: #F8F6F0;
-      color: #181917;
+      background-color: rgb(var(--color-canvas));
+      color: rgb(var(--color-carbon));
       font-family: 'Plus Jakarta Sans', sans-serif;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+      transition: background-color 0.4s ease, color 0.4s ease;
     }
 
     ::selection {
-      background-color: #D4F868;
-      color: #181917;
+      background-color: rgb(var(--color-neon-lime));
+      color: rgb(var(--color-carbon));
+    }
+
+    html[data-theme="fresh-green"] ::selection {
+      background-color: rgb(var(--color-neon-lime));
+      color: #FFFFFF;
+    }
+
+    html[data-theme="fresh-green"] .bg-neonLime {
+      color: #FFFFFF !important;
+    }
+    html[data-theme="fresh-green"] .bg-neonLime * {
+      color: #FFFFFF !important;
+    }
+    html[data-theme="fresh-green"] .text-neonLime {
+      color: #7BAD32 !important;
     }
 
     /* The Signature Serif Italic Accent */
@@ -196,8 +255,17 @@
       </a>
     </nav>
 
-    <!-- RIGHT ACTION: SHOPEE BAG BUTTON & SIGNATURE NEON LIME PILL BUTTON -->
-    <div class="flex items-center gap-3">
+    <!-- RIGHT ACTION: SHOPEE BAG BUTTON, THEME TOGGLE & SIGNATURE NEON LIME PILL BUTTON -->
+    <div class="flex items-center gap-2.5 sm:gap-3">
+      <!-- Theme Switcher Toggle (Warm Classic / Zest Fresh Green) -->
+      <button type="button" id="theme-toggle-btn" 
+              class="h-10 px-3 sm:px-3.5 rounded-full bg-surface hover:bg-surfaceLight text-carbon flex items-center gap-2 text-xs font-bold border border-borderSubtle transition shadow-xs cursor-pointer select-none"
+              title="Ganti Tema Warna (Warm Classic / Zest Fresh Green)">
+        <span id="theme-color-indicator" class="w-2.5 h-2.5 rounded-full bg-neonLime inline-block shadow-xs border border-carbon/20"></span>
+        <span id="theme-toggle-label" class="hidden lg:inline text-[11px] uppercase tracking-wider font-extrabold">Warm Cream</span>
+        <i class="fa-solid fa-palette text-stoneMuted text-xs"></i>
+      </button>
+
       <!-- Soft Pill Shopping Bag Button (Shopee Luniva Eyewear) -->
       <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" 
          class="h-10 px-3.5 rounded-full bg-pink-100/70 hover:bg-pink-100 text-carbon flex items-center gap-1.5 text-xs font-bold border border-pink-200/60 transition shadow-sm"
@@ -232,6 +300,16 @@
       <a href="/lokasi" class="py-2.5 px-4 rounded-xl bg-surface transition">Kontak & Lokasi Cabang</a>
       
       <div class="pt-3 border-t border-borderSubtle flex flex-col gap-2">
+        <!-- Mobile Theme Toggle -->
+        <button type="button" id="mobile-theme-toggle-btn"
+                class="w-full py-2.5 px-4 rounded-xl bg-surface border border-borderSubtle text-carbon font-bold text-xs flex items-center justify-between transition cursor-pointer">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-palette text-stoneMuted"></i>
+            <span>Ganti Tema Warna</span>
+          </span>
+          <span id="mobile-theme-name" class="font-black text-[10px] uppercase tracking-wider text-carbon bg-canvas px-2.5 py-0.5 rounded-full border border-borderSubtle">Warm Cream</span>
+        </button>
+
         <a href="https://www.instagram.com/optik_mario?fqnt=MWF0dnl3OWFvYmpycQ==" target="_blank" rel="noopener" class="w-full text-center py-2.5 rounded-full bg-canvas border border-borderSubtle text-carbon font-bold text-xs">
           <i class="fa-brands fa-instagram text-rose-600 mr-1.5"></i> Instagram @optik_mario
         </a>
@@ -1225,6 +1303,17 @@
   </div>
 </div>
 
+  <!-- FLOATING QUICK THEME TOGGLE (BOTTOM LEFT) -->
+  <aside aria-label="Ganti Tema Cepat" class="fixed bottom-5 left-5 z-40">
+    <button type="button" id="floating-theme-toggle-btn"
+            class="group bg-surface/90 hover:bg-surface text-carbon border border-borderSubtle backdrop-blur-md px-3 sm:px-3.5 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 text-xs font-bold transform hover:scale-105 cursor-pointer"
+            title="Ganti Tema Warna (Warm Classic / Zest Fresh Green)">
+      <span id="floating-theme-indicator" class="w-2.5 h-2.5 rounded-full bg-neonLime inline-block shadow-xs border border-carbon/20"></span>
+      <span class="text-[11px] font-extrabold uppercase tracking-wider hidden sm:inline" id="floating-theme-label">Tema</span>
+      <i class="fa-solid fa-palette text-stoneMuted text-xs"></i>
+    </button>
+  </aside>
+
   <!-- JAVASCRIPT LOGIC FOR NAVIGATION & INTERACTIONS -->
   <script>
     // Mobile Drawer Toggle
@@ -1293,6 +1382,54 @@
         }, { passive: true });
       }
     });
+
+    // DUAL THEME SWITCHER (Warm Cream <-> Zest Fresh Green)
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      try {
+        localStorage.setItem('optik_theme', theme);
+      } catch (e) {}
+
+      const isGreen = theme === 'fresh-green';
+      const label = document.getElementById('theme-toggle-label');
+      const mobileLabel = document.getElementById('mobile-theme-name');
+      const indicator = document.getElementById('theme-color-indicator');
+      const floatingLabel = document.getElementById('floating-theme-label');
+      const floatingIndicator = document.getElementById('floating-theme-indicator');
+
+      if (label) label.textContent = isGreen ? 'Zest Green' : 'Warm Cream';
+      if (mobileLabel) mobileLabel.textContent = isGreen ? '🌿 Zest Green' : '🌾 Warm Cream';
+      if (floatingLabel) floatingLabel.textContent = isGreen ? 'Zest Green' : 'Warm Cream';
+      
+      const themeColor = isGreen ? '#7BAD32' : '#D4F868';
+      if (indicator) indicator.style.backgroundColor = themeColor;
+      if (floatingIndicator) floatingIndicator.style.backgroundColor = themeColor;
+    }
+
+    function initThemeSwitcher() {
+      const savedTheme = localStorage.getItem('optik_theme') || 'warm';
+      applyTheme(savedTheme);
+
+      const desktopBtn = document.getElementById('theme-toggle-btn');
+      const mobileBtn = document.getElementById('mobile-theme-toggle-btn');
+      const floatingBtn = document.getElementById('floating-theme-toggle-btn');
+
+      function toggleTheme() {
+        const active = document.documentElement.getAttribute('data-theme') || 'warm';
+        const next = active === 'warm' ? 'fresh-green' : 'warm';
+        applyTheme(next);
+      }
+
+      if (desktopBtn) desktopBtn.addEventListener('click', toggleTheme);
+      if (mobileBtn) mobileBtn.addEventListener('click', toggleTheme);
+      if (floatingBtn) floatingBtn.addEventListener('click', toggleTheme);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initThemeSwitcher);
+    } else {
+      initThemeSwitcher();
+    }
   </script>
 </body>
 </html>

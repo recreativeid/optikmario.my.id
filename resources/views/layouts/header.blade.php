@@ -59,8 +59,17 @@
       </a>
     </nav>
 
-    <!-- RIGHT ACTION: SHOPEE BAG BUTTON & SIGNATURE NEON LIME PILL BUTTON -->
-    <div class="flex items-center gap-3">
+    <!-- RIGHT ACTION: SHOPEE BAG BUTTON, THEME TOGGLE & SIGNATURE NEON LIME PILL BUTTON -->
+    <div class="flex items-center gap-2.5 sm:gap-3">
+      <!-- Theme Switcher Toggle (Warm Classic / Zest Fresh Green) -->
+      <button type="button" id="theme-toggle-btn" 
+              class="h-10 px-3 sm:px-3.5 rounded-full bg-surface hover:bg-surfaceLight text-carbon flex items-center gap-2 text-xs font-bold border border-borderSubtle transition shadow-xs cursor-pointer select-none"
+              title="Ganti Tema Warna (Warm Classic / Zest Fresh Green)">
+        <span id="theme-color-indicator" class="w-2.5 h-2.5 rounded-full bg-neonLime inline-block shadow-xs border border-carbon/20"></span>
+        <span id="theme-toggle-label" class="hidden lg:inline text-[11px] uppercase tracking-wider font-extrabold">Warm Cream</span>
+        <i class="fa-solid fa-palette text-stoneMuted text-xs"></i>
+      </button>
+
       <!-- Soft Pill Shopping Bag Button (Shopee Luniva Eyewear) -->
       <a href="https://shopee.co.id/lunivaeyewear" target="_blank" rel="noopener" 
          class="h-10 px-3.5 rounded-full bg-pink-100/70 hover:bg-pink-100 text-carbon flex items-center gap-1.5 text-xs font-bold border border-pink-200/60 transition shadow-sm"
@@ -95,6 +104,16 @@
       <a href="<?php echo route_url('/lokasi'); ?>" class="py-2.5 px-4 rounded-xl bg-surface transition">Kontak & Lokasi Cabang</a>
       
       <div class="pt-3 border-t border-borderSubtle flex flex-col gap-2">
+        <!-- Mobile Theme Toggle -->
+        <button type="button" id="mobile-theme-toggle-btn"
+                class="w-full py-2.5 px-4 rounded-xl bg-surface border border-borderSubtle text-carbon font-bold text-xs flex items-center justify-between transition cursor-pointer">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-palette text-stoneMuted"></i>
+            <span>Ganti Tema Warna</span>
+          </span>
+          <span id="mobile-theme-name" class="font-black text-[10px] uppercase tracking-wider text-carbon bg-canvas px-2.5 py-0.5 rounded-full border border-borderSubtle">Warm Cream</span>
+        </button>
+
         <a href="https://www.instagram.com/optik_mario?fqnt=MWF0dnl3OWFvYmpycQ==" target="_blank" rel="noopener" class="w-full text-center py-2.5 rounded-full bg-canvas border border-borderSubtle text-carbon font-bold text-xs">
           <i class="fa-brands fa-instagram text-rose-600 mr-1.5"></i> Instagram @optik_mario
         </a>
