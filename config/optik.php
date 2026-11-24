@@ -4,6 +4,7 @@ return array (
   'brand' => 
   array (
     'name' => 'Optik Mario',
+    'logo' => '/optikmario.my.id/public/images/logo/optik_mario_logo.png',
     'tagline' => 'Lebih Jelas Melihat, Lebih Percaya Diri',
     'sub_tagline' => 'Harga murah bisa menggiurkan, tapi kesehatan mata tak boleh dikorbankan.',
     'cta_resep' => 'Konsultasikan resep mata Anda di Optik Mario – Pilih Lensa Yang Aman Untuk Penglihatan.',

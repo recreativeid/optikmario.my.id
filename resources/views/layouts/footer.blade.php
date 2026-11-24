@@ -6,11 +6,11 @@
       
       <!-- Brand Column -->
       <div class="md:col-span-4">
-        <a href="<?php echo route_url('/'); ?>" class="inline-flex items-center gap-2 mb-4">
-          <span class="text-2xl font-black tracking-tight text-white font-sans">
-            OPTIK<span class="font-normal text-stone-400">MARIO</span>
-          </span>
-          <span class="w-2 h-2 rounded-full bg-neonLime inline-block"></span>
+        <a href="<?php echo route_url('/'); ?>" class="inline-flex items-center gap-2 mb-4 group" title="Optik Mario — We Are Optometrist">
+          <img src="/optikmario.my.id/public/images/logo/optik_mario_logo.png" 
+               onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='public/images/logo/optik_mario_logo.png';"
+               alt="Optik Mario" 
+               class="h-11 sm:h-12 w-auto object-contain brightness-105">
         </a>
         
         <p class="text-xs text-stone-400 leading-relaxed mb-4">

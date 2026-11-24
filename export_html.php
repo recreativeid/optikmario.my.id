@@ -99,8 +99,11 @@ $notFoundHtml = <<<'HTML'
 </head>
 <body class="bg-[#F8F6F0] text-[#181917] min-h-screen flex items-center justify-center p-6 font-['Plus_Jakarta_Sans']">
   <div class="max-w-md w-full bg-white rounded-3xl p-8 sm:p-10 text-center shadow-xl border border-[#E5E1D6]">
-    <div class="w-16 h-16 rounded-full bg-[#EFECE3] text-[#181917] flex items-center justify-center mx-auto mb-6">
-      <i class="fa-solid fa-glasses text-2xl"></i>
+    <div class="mb-6 flex justify-center">
+      <img src="/optikmario.my.id/public/images/logo/optik_mario_logo.png" 
+           onerror="this.onerror=null; if(this.src.includes('/optikmario.my.id/')) this.src=this.src.replace('/optikmario.my.id/', '/'); else this.src='public/images/logo/optik_mario_logo.png';" 
+           alt="Optik Mario" 
+           class="h-12 w-auto object-contain">
     </div>
     <span class="text-xs font-black uppercase tracking-[0.2em] text-[#686B63] mb-2 block">404 NOT FOUND</span>
     <h1 class="text-2xl sm:text-3xl font-black mb-3 text-[#181917]">Halaman Tidak Ditemukan</h1>
